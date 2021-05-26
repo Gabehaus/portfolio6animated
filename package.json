@@ -2,7 +2,7 @@
   "name": "empty_react_app",
   "version": "1.0.0",
   "description": "empty_react_app",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
