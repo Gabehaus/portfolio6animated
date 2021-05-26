@@ -5,6 +5,7 @@ import morgan from "morgan"
 
 import cors from "cors"
 import test from "./routes/test.js"
+import mail from "./routes/mail.js"
 
 dotenv.config()
 
@@ -19,6 +20,7 @@ if (process.env.NODE_ENV === "development") {
 app.use(express.json())
 
 app.use("/api/test", test)
+app.use("/api/mail", mail)
 
 const PORT = process.env.PORT || 5000
 

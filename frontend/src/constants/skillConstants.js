@@ -1,0 +1,3 @@
+export const CHANGE_SKILLSET = "CHANGE_SKILLSET"
+
+export const SHOW_SKILL = "SHOW_SKILL"

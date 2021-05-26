@@ -2,9 +2,11 @@ import { createStore, combineReducers, applyMiddleware } from "redux"
 import thunk from "redux-thunk"
 import { composeWithDevTools } from "redux-devtools-extension"
 import { testReducer } from "./reducers/testReducers"
+import { skillReducer } from "./reducers/skillReducers"
 
 const reducer = combineReducers({
-  test: testReducer
+  test: testReducer,
+  skill: skillReducer
 })
 
 const tokenTestFromStorage = localStorage.getItem("tokenTest")
@@ -12,7 +14,8 @@ const tokenTestFromStorage = localStorage.getItem("tokenTest")
   : "change me"
 
 const initialState = {
-  test: { testReducerItem: tokenTestFromStorage }
+  test: { testReducerItem: tokenTestFromStorage },
+  skill: { skill: "Front-End" }
 }
 
 const middleware = [thunk]
