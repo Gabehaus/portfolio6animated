@@ -1,6 +1,6 @@
 import React from "react"
 // import { useDispatch, useSelector } from "react-redux"
-import { Row, Col } from "react-bootstrap"
+import { Row, Col, Image } from "react-bootstrap"
 import NANOGPNG from "../images/apps/NANOGPNG.png"
 
 const Assistance = () => {
@@ -11,12 +11,11 @@ const Assistance = () => {
         style={{ border: "none 2px white" }}
       >
         <Col md={5} style={{ border: "none 2px white" }} className='mt-1'>
-          <img
+          <Image
             src={NANOGPNG}
             alt='NANOG SITE UPGRADE'
             className='computer-image2'
-          ></img>
-          <div style={{ minHeight: "3vw" }}></div>
+          ></Image>
         </Col>
         <Col md={5} className='mt-0 mb-5'>
           <Row>

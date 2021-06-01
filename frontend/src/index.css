@@ -203,6 +203,7 @@ curved-div - 9 */
   }
 
   .computer-image2 {
+    position: relative !important;
     margin-left: 50%;
     transform: translateX(-50%);
     max-width: 92%;
