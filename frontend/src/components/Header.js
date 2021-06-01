@@ -12,11 +12,11 @@ import {
   Button
 } from "react-bootstrap"
 import logo3 from "../images/logo3.png"
-
+//#555eff #fa75d2  #21ffe5"
 const Header = () => {
   return (
     <header>
-      <Navbar style={{ background: "#1f1f1f" }} expand='lg'>
+      <Navbar style={{ background: "#0d0d0d" }} expand='lg'>
         <Navbar.Brand href='#home'>
           {" "}
           <img
@@ -41,19 +41,19 @@ const Header = () => {
                 href='#work'
                 class='lin'
                 style={{
-                  color: "#555eff",
+                  color: "#5c21ff",
                   fontSize: "180"
                 }}
               >
                 Work
               </Nav.Link>
-              <Nav.Link href='#skills' class='lin' style={{ color: "#555eff" }}>
+              <Nav.Link href='#skills' class='lin' style={{ color: "#5c21ff" }}>
                 Skills
               </Nav.Link>
               <Nav.Link
                 href='#contact'
                 class='lin'
-                style={{ color: "#555eff" }}
+                style={{ color: "#5c21ff" }}
               >
                 Resume
               </Nav.Link>

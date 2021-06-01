@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "empty_react_app",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
@@ -20,6 +21,8 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
+    "fs-extra": "^10.0.0",
+    "gltf-pipeline": "^3.0.2",
     "mongoose": "^5.12.11",
     "morgan": "^1.10.0",
     "nodemailer": "^6.6.1",

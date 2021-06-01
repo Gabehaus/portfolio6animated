@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from "react-redux"
 import { Row, Col, Button } from "react-bootstrap"
 import Work from "../components/Work"
 import Contact from "../components/Contact"
+import ThreeD1 from "../components/ThreeD1"
+import ThreeDIpad from "../components/ThreeDIpad"
+import ThreeDmobile from "../components/ThreeDmobile"
 // import BubbleChart from "../components/BubbleChart"
 import Skills from "../components/Skills"
 import Aos from "aos"
@@ -92,7 +95,7 @@ const HomeMain = () => {
 
   return (
     <div
-      style={{ background: "#1f1f1f", minHeight: "90vh", minWidth: "100vw" }}
+      style={{ background: "#0d0d0d", minHeight: "90vh", minWidth: "100vw" }}
     >
       <Row>
         <Col
@@ -112,14 +115,11 @@ const HomeMain = () => {
 
           <Row className='bg-light'>
             <Col className={screen == "Mobile" ? "text-center" : null}>
-              {screen == "Mobile" ? (
+              {//  style={{ maxWidth: "100%", marginTop: "8vh" }}
+              screen == "Mobile" ? (
                 <div alt='' src={selfie} className='selfie-wrapper-mobile'>
                   {" "}
-                  <img
-                    alt=''
-                    src={selfie}
-                    style={{ maxWidth: "100%", marginTop: "8vh" }}
-                  />
+                  <ThreeDmobile />
                 </div>
               ) : null}
               Hi,
@@ -153,14 +153,11 @@ const HomeMain = () => {
         >
           <Row className='bg-light'>
             <Col style={{ paddingTop: "0" }}>
-              {screen !== "Mobile" ? (
-                <div alt='' src={selfie} className='selfie-wrapper'>
+              {// style={{ maxWidth: "100%", marginTop: "8vh" }}
+              screen !== "Mobile" ? (
+                <div alt='' className='selfie-wrapper'>
                   {" "}
-                  <img
-                    alt=''
-                    src={selfie}
-                    style={{ maxWidth: "100%", marginTop: "8vh" }}
-                  />
+                  {screen === "Ipad" ? <ThreeDIpad /> : <ThreeD1 />}
                 </div>
               ) : null}
             </Col>
@@ -176,7 +173,7 @@ const HomeMain = () => {
             className='curve-one'
           >
             <path
-              fill='#9781ff'
+              fill='#7f6ceb'
               fill-opacity='1'
               d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
             ></path>
@@ -198,7 +195,7 @@ const HomeMain = () => {
             style={{ zIndex: "-1 !important", float: "right !important" }}
           >
             <path
-              fill='#9781ff'
+              fill='#7f6ceb'
               fill-opacity='1'
               d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
             ></path>
@@ -214,7 +211,7 @@ const HomeMain = () => {
           position: "relative",
           // transform: "rotate(180deg)",
           marginTop: "-1vh",
-          background: "#1f1f1f"
+          background: "#0d0d0d"
         }}
       >
         <svg

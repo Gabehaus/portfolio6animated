@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://127.0.0.1:5000",
@@ -20,12 +20,16 @@
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-three-fiber": "^6.0.13",
     "redux": "^4.1.0",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
+    "three": "^0.129.0",
+    "three.js": "^0.77.1",
     "uuid4": "^2.0.2",
     "uuidv4": "^6.2.8",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "zustand": "^3.5.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Row, Col, Form } from "react-bootstrap"
+import { Link } from "react-router-dom"
+import resume from "../pdf/resume.pdf"
 import BubbleChart from "./BubbleChart"
 import SkillSelector from "./SkillSelector"
 import Aos from "aos"
@@ -59,7 +61,7 @@ const Skills = ({ skill }) => {
           <Col
             md={12}
             className='work-title2'
-            style={{ background: "#9781ff" }}
+            style={{ background: "transparent" }}
           >
             What I'm Into
           </Col>{" "}
@@ -68,14 +70,21 @@ const Skills = ({ skill }) => {
             className={
               screen !== "Desktop" ? "paragraph text-center" : "paragraph"
             }
+            style={{ background: "transparent" }}
           >
-            I help people bring their visions to life. From moving businesses
-            online to building full-stack mobile apps, if you can dream it I can
-            code it. I try to think of every project I work on as a coupling of
-            art and technology. As Steve Jobs said, "it's technology married
-            with liberal arts, married with the humanities, that yields us the
-            results that make our heart sing."
+            From moving businesses online to building full-stack mobile apps, if
+            you can dream it I can code it. I try to think of every project I
+            work on as a coupling of art and technology. As Steve Jobs said,
+            "it's technology married with liberal arts, married with the
+            humanities, that yields us the results that make our heart sing."
           </Col>
+          <Col md={12} style={{ border: "none 1px pink" }}>
+            {" "}
+            <Link to={resume} target='_blank' download>
+              <p className='resume-link-skills'>Download My Resume</p>
+            </Link>
+          </Col>
+          <div style={{ minHeight: "2vw" }}></div>
         </Col>
 
         <Col

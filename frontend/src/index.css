@@ -4,10 +4,17 @@ curved-div - 9 */
 
 @media (max-width: 3000px) {
   body {
-    background: #1f1f1f !important;
+    background: #0d0d0d !important;
     overflow-x: hidden !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
   }
 
   .navbar a {
@@ -24,7 +31,7 @@ curved-div - 9 */
   }
 
   .hi-box {
-    background: #1f1f1f;
+    background: #0d0d0d;
 
     margin-left: auto;
     margin-right: auto;
@@ -38,23 +45,24 @@ curved-div - 9 */
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 10vh;
-    background: #1f1f1f;
+    background: #0d0d0d;
     color: white;
   }
 
   .selfie-wrapper {
-    margin-left: -5vw;
+    margin-left: -20vw;
+    width: 35vw;
     margin-top: 6vh !important;
+    border: none 2px pink !important;
 
-    width: 15vw;
-    min-height: 30vh;
+    min-height: 50vh !important;
   }
 
   .small-text {
     font-family: "Roboto", sans-serif !important;
     font-size: 2vw !important;
     font-weight: 300 !important;
-    color: #848383 !important;
+    color: #da97f7 !important;
   }
 
   .contact-button {
@@ -63,16 +71,16 @@ curved-div - 9 */
     padding-left: 5vw;
     padding-right: 5vw;
     margin-top: 3vh !important;
-    border: solid 5px #555eff;
-    color: #555eff;
-    background: #1f1f1f;
+    border: solid 5px #4621ff;
+    color: #4621ff;
+    background: #0d0d0d;
     font-size: 1vw !important;
     font-family: "Roboto", sans-serif !important;
     font-weight: 400 !important;
     margin-top: 5vh !important;
     /* position: relative;
     border: solid 3px #555eff;
-    background: #1f1f1f;
+    background: #0d0d0d;
     color: #555eff;
     height: 50%;
     font-size: 2vw !important;
@@ -80,7 +88,7 @@ curved-div - 9 */
   }
 
   .submit-button {
-    background: #1f1f1f !important;
+    background: #0d0d0d !important;
     color: #555eff !important;
     border: solid 2px #555eff !important;
     border-radius: 0px !important;
@@ -103,9 +111,20 @@ curved-div - 9 */
   }
 
   .work-title2 {
-    margin-top: 0vw !important;
-    color: white;
+    margin-top: 2vw !important;
+    color: #212121 !important;
     margin-bottom: 2vw;
+    background: #7f6ceb !important;
+  }
+
+  .work-title3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 10vh;
+    text-align: center;
+    margin-top: -8vh !important;
+    z-index: "20";
+    color: black !important;
   }
 
   .contact-title {
@@ -113,14 +132,14 @@ curved-div - 9 */
   }
 
   @supports (-webkit-text-stroke: 1px black) {
-    .work-title {
-      -webkit-text-stroke: 0px #555eff;
+    /* .work-title2 {
+      -webkit-text-stroke: 0px #da97f7;
       -webkit-text-fill-color: white;
-    }
+    } */
   }
 
   .project-name {
-    color: white;
+    color: #0d0d0d;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 4vh;
@@ -128,7 +147,7 @@ curved-div - 9 */
   }
 
   .project-name2 {
-    color: #1f1f1f;
+    color: #0d0d0d;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 4vh;
@@ -137,19 +156,19 @@ curved-div - 9 */
 
   .project-description {
     font-family: "Roboto", sans-serif;
-    color: white;
+    color: #0d0d0d;
     font-size: 0.9vw;
   }
 
   .project-tech {
     font-family: "Roboto", sans-serif;
-    color: white;
+    color: #0d0d0d;
     font-size: 0.9vw;
   }
 
   .about-button {
     border: none;
-    background: #5600ff;
+    background: #4621ff;
     color: white;
     border-radius: 50px;
     height: 2.3vw;
@@ -159,7 +178,7 @@ curved-div - 9 */
   }
 
   .visit-button {
-    background: #5600ff;
+    background: #4621ff;
     border: none 2px #5600ff;
     color: white;
     border-radius: 50px;
@@ -193,15 +212,17 @@ curved-div - 9 */
     color: white;
     margin-left: 2vw;
     margin-top: -3vw !important;
-    margin-bottom: 4vw;
+    margin-bottom: 1vw;
     background: #9781ff;
+    font-size: 1.5vw;
   }
 
   .skills {
     max-width: 100vw !important;
-    background: #9781ff !important;
+    background: #7f6ceb !important;
     margin-left: 0vw !important;
     margin-top: -1px !important;
+    border: none 2px pink;
   }
 
   .circle-wrapper {
@@ -210,7 +231,7 @@ curved-div - 9 */
   }
 
   .what-im-into {
-    margin-top: 4vw !important;
+    margin-top: -3vw !important;
   }
 
   .form-box {
@@ -220,8 +241,8 @@ curved-div - 9 */
   }
 
   .rounded-0 {
-    background: #404040 !important;
-    border: 1px solid #404040 !important;
+    background: #9c78ff !important;
+    border: 1px solid #9c78ff !important;
   }
 
   ::placeholder {
@@ -253,13 +274,24 @@ curved-div - 9 */
   .project-desc1 {
     color: white;
   }
+
+  .resume-link-skills {
+    text-decoration: underline;
+    color: #0d0d0d;
+    font-size: 1.3vw;
+    margin-left: 2vw;
+  }
 }
 
 @media (max-width: 1500px) {
   .selfie-wrapper {
+    margin-left: -18vw;
+    width: 40vw !important;
+
     margin-top: 5vh !important;
 
     width: 18vw;
+    z-index: 1 !important;
   }
 
   .project-description,
@@ -288,7 +320,7 @@ curved-div - 9 */
   }
 
   .paragraph {
-    margin-bottom: 6vw;
+    margin-bottom: 1vw;
     margin-left: 2vw;
   }
 }
@@ -353,13 +385,13 @@ curved-div - 9 */
     min-height: 12vh;
 
     font-size: 5vh;
-    background: #1f1f1f;
+    background: #0d0d0d;
     color: white;
   }
 
   .selfie-wrapper {
     margin-top: -7vh !important;
-    margin-left: -7vw;
+    margin-left: -22vw;
     width: 29vw;
   }
 
@@ -376,40 +408,46 @@ curved-div - 9 */
   }
 
   .project-name {
-    font-size: 3vw;
+    font-size: 4vw;
     /* text-align: center; */
   }
 
   .project-description,
   .project-tech {
-    font-size: 1.2vw;
+    font-size: 2.2vw;
     /* text-align: center; */
   }
 
   .about-button {
-    height: 4vw;
+    height: 5vw;
     padding-left: 0.8vw;
     padding-right: 0.8vw;
-    font-size: 1.5vw;
-    width: 10vw;
+    font-size: 2.2vw;
+    width: 15vw;
     margin: 0 !important;
   }
 
   .visit-button {
-    height: 4vw;
+    height: 5vw;
     padding-left: 0.8vw;
     padding-right: 0.8vw;
     margin: 0 !important;
 
-    font-size: 1.5vw;
+    font-size: 2.2vw;
 
-    width: 10vw;
+    width: 15vw;
   }
 
   .app-image-wrapper {
     max-width: 90vw !important;
     margin-left: 50% !important;
     transform: translateX(-50%) !important;
+  }
+
+  .computer-image {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    max-width: 110%;
   }
 
   .computer-image2 {
@@ -428,10 +466,15 @@ curved-div - 9 */
     margin-left: 0vw;
     padding-left: 40px;
     padding-right: 40px;
+    font-size: 3vw;
   }
 
   .input-email {
     margin-top: 3vw;
+  }
+
+  .resume-link-skills {
+    display: none;
   }
 }
 
@@ -453,7 +496,8 @@ curved-div - 9 */
 
 @media (max-width: 580px) {
   .selfie-wrapper-mobile {
-    width: 50vw;
+    width: 100vw;
+    border: none 2px pink;
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: -12vw;
@@ -470,13 +514,17 @@ curved-div - 9 */
   .small-text {
     margin-top: -7vw !important;
     text-align: center !important;
+    font-size: 5vw !important;
   }
 
   .contact-button {
     margin-left: 50% !important;
+    margin-top: 7vw !important;
     transform: translateX(-50%);
-    padding-left: 12vw;
-    padding-right: 12vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    font-size: 4.5vw !important;
+    height: 13vw;
   }
 
   .curve-wrapper {
@@ -496,8 +544,12 @@ curved-div - 9 */
 
   .project-description,
   .project-tech {
-    font-size: 2.9vw;
+    font-size: 4vw;
     /* text-align: center; */
+  }
+
+  .project-tech {
+    font-size: 5vw;
   }
 
   .project-name {
@@ -507,10 +559,10 @@ curved-div - 9 */
 
   .about-button,
   .visit-button {
-    width: 18vw;
-    margin-left: -8vw !important;
-    height: 7vw;
-    font-size: 2.6vw;
+    width: 24vw;
+    margin-left: -12vw !important;
+    height: 12vw;
+    font-size: 3.3vw;
   }
 
   .visit-button {
@@ -523,6 +575,11 @@ curved-div - 9 */
 
   ::placeholder {
     font-size: 1em;
+  }
+
+  .paragraph {
+    font-size: 4vw !important;
+    margin-top: 2vw !important;
   }
 }
 

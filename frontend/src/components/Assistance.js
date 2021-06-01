@@ -17,11 +17,11 @@ const Assistance = () => {
             style={{ border: "none 2px white" }}
             className='mt-1 mb-5'
           >
-            <img src={NANOGPNG} className='computer-image'></img>
+            <img src={NANOGPNG} className='computer-image2'></img>
           </Col>
-          <Col md={5} style={{ border: "none 2px grey" }} className='mt-3 mb-3'>
+          <Col md={5} className='mt-0 mb-5'>
             <Row>
-              <Col className='project-name'>NANOG Site Upgrade</Col>
+              <Col className='project-name mt-0'>NANOG Site Upgrade</Col>
             </Row>
             <Row>
               <Col className='project-description px-3 mt-2'>

@@ -120,7 +120,7 @@ class BubbleChart1c extends React.Component {
       .scaleLinear()
       .domain([minValue, maxValue])
       .interpolate(d3.interpolateHcl)
-      .range(["white", "#555eff"])
+      .range(["#645bde", "#9d81db"])
 
     // render simple circle element
     //radiusScale controls size of circles
@@ -133,7 +133,7 @@ class BubbleChart1c extends React.Component {
             cx={item.x}
             cy={item.y}
             fill={color(item.v)}
-            stroke={d3.rgb(color(item.v)).brighter(2)}
+            stroke={d3.rgb(color("#ff366f")).brighter(4)}
             strokeWidth='2'
           />
         )
@@ -168,7 +168,7 @@ class BubbleChart1c extends React.Component {
           />
           <text
             dy='6'
-            fill='#1229db'
+            fill='#0d0d0d'
             fontFamily='Arial'
             textAnchor='middle'
             fontSize={`${fontSize}px`}
@@ -187,12 +187,12 @@ class BubbleChart1c extends React.Component {
     if (this.state.data.length) {
       return (
         <svg
-          width={"10vw"} // "#1f1f1f"
+          width={"10vw"} // "#0d0d0d"
           height={"25vw"}
           style={{
             marginTop: "0vh",
 
-            background: "#9781ff",
+            background: "transparent",
             overflow: "visible"
           }}
           data-aos={window.innerWidth > 800 ? "fade-in" : null}

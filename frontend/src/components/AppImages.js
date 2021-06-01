@@ -31,7 +31,7 @@ const AppImages = ({ images }) => {
             <Col
               md={5}
               style={{ border: "none 2px white" }}
-              className='mt-5 mb-3'
+              className='mt-5 mb-5'
             >
               <img src={images[index]} className={project.className}></img>
             </Col>

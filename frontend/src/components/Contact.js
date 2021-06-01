@@ -80,7 +80,7 @@ export default function Contact() {
       >
         {sent ? <Alert color='success'>Email successfully sent!</Alert> : null}
         {sent == false ? <Alert color='danger'>Email not sent!</Alert> : null}
-        <Row md={12} style={{ background: "#1f1f1f" }} className='px-0'>
+        <Row md={12} style={{ background: "#0d0d0d" }} className='px-0'>
           <Col lg={4}>
             {/* <Form.Label for='name'>Full Name</Form.Label> */}
             <input
@@ -136,7 +136,7 @@ export default function Contact() {
           style={{
             color: "white",
             textDecoration: "underline",
-            color: "#555eff"
+            color: "#da97f7"
           }}
         >
           Download My Resume

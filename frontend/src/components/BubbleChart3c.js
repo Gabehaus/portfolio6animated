@@ -107,7 +107,7 @@ class BubbleChart1c extends React.Component {
       .scaleLinear()
       .domain([minValue, maxValue])
       .interpolate(d3.interpolateHcl)
-      .range(["white", "#555eff"])
+      .range(["#645bde", "#9d81db"])
 
     // render simple circle element
     //radiusScale controls size of circles
@@ -143,7 +143,7 @@ class BubbleChart1c extends React.Component {
       return (
         <g
           key={index}
-          transform={`translate(${props.width / 3 + item.x}, ${props.height /
+          transform={`translate(${props.width / 3.3 + item.x}, ${props.height /
             2 +
             item.y})`} //divisors originally were of value 2, this is how to move circles inside square 3, 1.7, 1.3
         >
@@ -155,7 +155,7 @@ class BubbleChart1c extends React.Component {
           />
           <text
             dy='6'
-            fill='#1229db'
+            fill='#0d0d0d'
             fontFamily='Arial'
             textAnchor='middle'
             fontSize={`${fontSize}px`}
@@ -174,13 +174,13 @@ class BubbleChart1c extends React.Component {
     if (this.state.data.length) {
       return (
         <svg
-          width={"100vw"} // "#1f1f1f"
+          width={"100vw"} // "#0d0d0d"
           height={"51vh"}
           style={{
             marginTop: "0vh",
             marginLeft: "50%",
             transform: "translateX(-50%)",
-            background: "#9781ff"
+            background: "transparent"
           }}
         >
           {this.renderBubbles(this.state.data)}

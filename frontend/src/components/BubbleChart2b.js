@@ -106,7 +106,7 @@ class BubbleChart2b extends React.Component {
       .scaleLinear()
       .domain([minValue, maxValue])
       .interpolate(d3.interpolateHcl)
-      .range(["white", "#555eff"])
+      .range(["#645bde", "#9d81db"])
 
     // render simple circle element
     //radiusScale controls size of circles
@@ -156,7 +156,7 @@ class BubbleChart2b extends React.Component {
           />
           <text
             dy='6'
-            fill='#fff'
+            fill='#0d0d0d'
             fontFamily='Arial'
             textAnchor='middle'
             fontSize={`${fontSize}px`}
@@ -175,13 +175,13 @@ class BubbleChart2b extends React.Component {
     if (this.state.data.length) {
       return (
         <svg
-          width={"100vw"} //window.innerWidth < 800 ? "100vw" : "50vw"   "#1f1f1f"
+          width={"100vw"} //window.innerWidth < 800 ? "100vw" : "50vw"   "#0d0d0d"
           height={"50vh"}
           style={{
             marginTop: "0vh",
             marginLeft: "50%",
             transform: "translateX(-50%)",
-            background: "#9781ff"
+            background: "transparent"
           }}
         >
           {this.renderBubbles(this.state.data)}

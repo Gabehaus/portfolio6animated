@@ -1,7 +1,7 @@
 export const data = {
   properties: [
     {
-      className: "computer-image2",
+      className: "computer-image",
       color: "#00d486",
       app: "https://fathackertest.herokuapp.com/",
       github: "https://github.com/Gabehaus/FatTrackerJune2020",
@@ -16,7 +16,7 @@ export const data = {
         "https://freecodecampassets.s3.us-east-2.amazonaws.com/Portfolio+Assets+1/apps/localhost_3007_(iPhone+6_7_8).png"
     },
     {
-      className: "computer-image2",
+      className: "computer-image",
       color: "#00d486",
       app: "https://calteksolutions.com/",
       github: "https://github.com/Gabehaus/CalTekTest",
@@ -97,7 +97,7 @@ export const data = {
       diary: "https://ghcodingdiary.herokuapp.com/calculator",
       name: "CALCULATOR",
       description:
-        "A digital calculator that logs a user's calculations and rounds answers using order of opporations rules.",
+        "Calculator that logs a user's input and rounds answers using order of opporations rules.",
       note1: "CSS Grid - Regular Expressions",
       note2: "FUNCTIONAL COMPONENTS",
       note3: "CSS GRID INTERFACE",
