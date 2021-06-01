@@ -10,14 +10,14 @@ const Assistance = () => {
         className='justify-content-center'
         style={{ border: "none 2px white" }}
       >
-        <Col md={5} style={{ border: "none 2px white" }} className='mt-1'>
+        <Col md={5} style={{ border: "none 2px white" }} className='mt-1 mb-5'>
           <Image
             src={NANOGPNG}
             alt='NANOG SITE UPGRADE'
             className='computer-image2'
           ></Image>
         </Col>
-        <Col md={5} className='mt-0 mb-5'>
+        <Col md={5} className='mt-5 mb-5'>
           <Row>
             <Col className='project-name mt-1'>NANOG Site Upgrade</Col>
           </Row>
