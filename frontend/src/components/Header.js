@@ -17,7 +17,7 @@ const Header = () => {
                 ? "250"
                 : window.innerWidth > 760
                 ? "150"
-                : "110"
+                : "160"
             }
             className='d-inline-block align-top'
             style={{ marginLeft: "6vw" }}
