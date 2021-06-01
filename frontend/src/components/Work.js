@@ -108,9 +108,8 @@ const Work = () => {
           Assistance on large-scale projects
         </h3>
       </Row>
-      <Row>
-        <Assistance />
-      </Row>
+
+      <Assistance />
     </div>
   )
 }
