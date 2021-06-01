@@ -17,7 +17,7 @@ const Assistance = () => {
               alt='NANOG SITE UPGRADE'
               className='computer-image2'
             ></img>
-            <div style={{ minHeight: "3vw" }}></div>
+            <div style={{ minHeight: "3vw" }}>test</div>
           </Col>
           <Col md={5} className='mt-0 mb-5'>
             <Row>
