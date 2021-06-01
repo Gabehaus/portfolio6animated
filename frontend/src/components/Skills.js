@@ -1,24 +1,15 @@
 import React, { useState, useEffect } from "react"
-import { Row, Col, Form } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import resume from "../pdf/resume.pdf"
-import BubbleChart from "./BubbleChart"
+
 import SkillSelector from "./SkillSelector"
 import Aos from "aos"
 import "aos/dist/aos.css"
-var _ = require("lodash")
 
 const Skills = ({ skill }) => {
-  const [chart, setChart] = useState("languages")
+  const chart = "languages"
   const [screen, setScreen] = useState("")
-
-  //.range = number of circles
-  //_.random = circle size variance
-  const rawdata = _.map([90, 90, 90, 70, 70, 70, 50, 50, 30, 30], thing => {
-    return {
-      v: thing //_.random(80, 100)  [90, 90, 90, 70, 70, 70, 50, 50, 30, 30]  _.range(10)
-    }
-  })
 
   useEffect(() => {
     Aos.init({

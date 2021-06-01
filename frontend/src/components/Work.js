@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { Row, Col, Button } from "react-bootstrap"
+
+import { Row, Col } from "react-bootstrap"
 import Aos from "aos"
 import "aos/dist/aos.css"
-import { uuid } from "uuidv4"
-import { data } from "../data"
+
 import AppImages from "./AppImages"
 import Assistance from "./Assistance"
 import calculatorPNG from "../images/apps/calculatorPNG.png"
@@ -16,12 +15,7 @@ import quotesBPNG from "../images/apps/quotesBPNG.png"
 import CalTekPNG from "../images/apps/CalTekPNG.png"
 
 const Work = () => {
-  const dispatch = useDispatch()
-  const test = useSelector(state => state.test)
-  const { testReducerItem } = test
-
-  const [screen, setScreen] = useState("")
-  const [slideImages, setSlideImages] = useState([
+  const slideImages = [
     fathackPNG,
     CalTekPNG,
     markownPNG,
@@ -29,9 +23,8 @@ const Work = () => {
     clockBPNG,
     calculatorPNG,
     quotesBPNG
-  ])
+  ]
   const [slideImagesPreloaded, setSlideImagesPreloaded] = useState([])
-  const [finished, setFinished] = useState("")
 
   useEffect(() => {
     Aos.init({
@@ -43,25 +36,6 @@ const Work = () => {
     }) // initialize animate on scroll
   }, [])
 
-  //set screen width variable
-  useEffect(() => {
-    const screenSet = () => {
-      if (window.innerWidth < 800 && window.innerWidth > 530) {
-        setScreen("Ipad")
-        return
-      }
-
-      if (window.innerWidth < 530) {
-        setScreen("Mobile")
-        return
-      }
-    }
-
-    window.addEventListener("resize", screenSet)
-
-    screenSet()
-  }, [])
-
   //load images
   useEffect(() => {
     slideImages.map(elem => {
@@ -71,6 +45,8 @@ const Work = () => {
         ...slideImagesPreloaded,
         newImage
       ])
+
+      return "finished"
     })
 
     // setTimeout(() => {

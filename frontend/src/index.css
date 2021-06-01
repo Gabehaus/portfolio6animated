@@ -143,7 +143,7 @@ curved-div - 9 */
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 4vh;
-    margin-top: 3vw !important;
+    margin-top: 4vw !important;
   }
 
   .project-name2 {
@@ -280,6 +280,11 @@ curved-div - 9 */
     color: #d58ae3;
     font-size: 1.3vw;
     margin-left: 2vw;
+  }
+
+  .comp-img {
+    position: relative;
+    /* margin-bottom: 0vw !important; */
   }
 }
 

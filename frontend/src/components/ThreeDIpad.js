@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { Canvas, useFrame } from "react-three-fiber"
 import shallow from "zustand/shallow"
 

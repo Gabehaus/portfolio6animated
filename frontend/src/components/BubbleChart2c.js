@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import * as d3 from "d3"
 var _ = require("lodash")
 
@@ -191,11 +191,5 @@ class BubbleChart1c extends React.Component {
     return <div>Loading</div>
   }
 }
-
-const rawdata = _.map(_.range(10), () => {
-  return {
-    v: _.random(80, 100)
-  }
-})
 
 export default BubbleChart1c

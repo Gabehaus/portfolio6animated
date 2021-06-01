@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 // import { useDispatch, useSelector } from "react-redux"
-import { Row, Col, Button } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import NANOGPNG from "../images/apps/NANOGPNG.png"
-import clockBPNG from "../images/apps/clockBPNG.png"
 
 const Assistance = () => {
   return (
@@ -17,11 +16,15 @@ const Assistance = () => {
             style={{ border: "none 2px white" }}
             className='mt-1 mb-5'
           >
-            <img src={NANOGPNG} className='computer-image2'></img>
+            <img
+              src={NANOGPNG}
+              alt='NANOG SITE UPGRADE'
+              className='computer-image2'
+            ></img>
           </Col>
           <Col md={5} className='mt-0 mb-5'>
             <Row>
-              <Col className='project-name mt-0'>NANOG Site Upgrade</Col>
+              <Col className='project-name mt-1'>NANOG Site Upgrade</Col>
             </Row>
             <Row>
               <Col className='project-description px-3 mt-2'>
@@ -43,6 +46,7 @@ const Assistance = () => {
                 <a
                   href='https://www.nanog.org/'
                   target='_blank'
+                  rel='noreferrer'
                   className='button-anchor'
                 >
                   <button className='about-button'>About</button>
@@ -52,6 +56,7 @@ const Assistance = () => {
                 <a
                   href='https://www.nanog.org/'
                   target='_blank'
+                  rel='noreferrer'
                   className='button-anchor'
                 >
                   <button className='visit-button'>Visit Site</button>

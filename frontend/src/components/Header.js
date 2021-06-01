@@ -1,16 +1,6 @@
 import React from "react"
-import { Route } from "react-router-dom"
 
-import { LinkContainer } from "react-router-bootstrap"
-import {
-  Navbar,
-  Nav,
-  Container,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button
-} from "react-bootstrap"
+import { Navbar, Nav } from "react-bootstrap"
 import logo3 from "../images/logo3.png"
 //#555eff #fa75d2  #21ffe5"
 const Header = () => {
@@ -39,7 +29,7 @@ const Header = () => {
             <div className='navLink-wrapper'>
               <Nav.Link
                 href='#work'
-                class='lin'
+                className='lin'
                 style={{
                   color: "#5c21ff",
                   fontSize: "180"
@@ -47,12 +37,16 @@ const Header = () => {
               >
                 Work
               </Nav.Link>
-              <Nav.Link href='#skills' class='lin' style={{ color: "#5c21ff" }}>
+              <Nav.Link
+                href='#skills'
+                className='lin'
+                style={{ color: "#5c21ff" }}
+              >
                 Skills
               </Nav.Link>
               <Nav.Link
                 href='#contact'
-                class='lin'
+                className='lin'
                 style={{ color: "#5c21ff" }}
               >
                 Resume

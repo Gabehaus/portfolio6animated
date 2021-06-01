@@ -1,26 +1,16 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
-import {
-  Button,
-  Form,
-  Group,
-  Label,
-  Control,
-  Alert,
-  Row,
-  Col,
-  FormControl
-} from "react-bootstrap"
+import { Button, Form, Alert, Row, Col } from "react-bootstrap"
 
 import axios from "axios"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import resume from "../pdf/resume.pdf"
 
 export default function Contact() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  const [disabled, setDisabled] = useState(false)
+
   const [sent, setSent] = useState(null)
 
   const handleSubmit = e => {
@@ -67,8 +57,6 @@ export default function Contact() {
     setMessage(e.target.value)
   }
 
-  const exit = () => {}
-
   return (
     <div className='form-box' id='contact'>
       <Row>
@@ -79,7 +67,7 @@ export default function Contact() {
         style={{ color: "white", marginBottom: "2vw" }}
       >
         {sent ? <Alert color='success'>Email successfully sent!</Alert> : null}
-        {sent == false ? <Alert color='danger'>Email not sent!</Alert> : null}
+        {sent === false ? <Alert color='danger'>Email not sent!</Alert> : null}
         <Row md={12} style={{ background: "#0d0d0d" }} className='px-0'>
           <Col lg={4}>
             {/* <Form.Label for='name'>Full Name</Form.Label> */}
@@ -134,7 +122,6 @@ export default function Contact() {
           target='_blank'
           download
           style={{
-            color: "white",
             textDecoration: "underline",
             color: "#da97f7"
           }}

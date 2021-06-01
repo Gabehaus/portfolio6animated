@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import * as d3 from "d3"
 import Aos from "aos"
 import "aos/dist/aos.css"
@@ -50,9 +50,7 @@ class BubbleChart1c extends React.Component {
         return window.innerWidth < maxWidth
       }
     })
-  }
 
-  componentDidMount() {
     if (this.props.data.length > 0) {
       this.minValue =
         0.1 *
@@ -207,11 +205,5 @@ class BubbleChart1c extends React.Component {
     return <div>Loading</div>
   }
 }
-
-const rawdata = _.map(_.range(10), () => {
-  return {
-    v: _.random(80, 100)
-  }
-})
 
 export default BubbleChart1c

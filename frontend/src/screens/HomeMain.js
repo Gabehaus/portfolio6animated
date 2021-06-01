@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 import { useDispatch, useSelector } from "react-redux"
-import { Row, Col, Button } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import Work from "../components/Work"
 import Contact from "../components/Contact"
 import ThreeD1 from "../components/ThreeD1"
@@ -12,10 +12,8 @@ import Skills from "../components/Skills"
 import Aos from "aos"
 import "aos/dist/aos.css"
 
-import addToTestReducer from "../actions/testActions"
 import changeSkillSet from "../actions/skillSetActions"
 
-import RenderTestVariable from "../components/RenderTestVariable"
 import selfie from "../images/selfie.png"
 // var _ = require("lodash")
 
@@ -24,8 +22,6 @@ const HomeMain = () => {
   const [screen, setScreen] = useState("")
   const skillReducer = useSelector(state => state.skill)
   const { skill } = skillReducer
-
-  const [skillVar, setSkillVar] = useState(skill)
 
   // //.range = number of circles
   // //_.random = circle size variance
@@ -86,12 +82,12 @@ const HomeMain = () => {
     }
 
     log(0)
-  }, [])
+  }, [dispatch])
 
-  const handleSubmit = (e, string) => {
-    e.preventDefault()
-    dispatch(addToTestReducer(string))
-  }
+  // const handleSubmit = (e, string) => {
+  //   e.preventDefault()
+  //   dispatch(addToTestReducer(string))
+  // }
 
   return (
     <div
@@ -114,27 +110,27 @@ const HomeMain = () => {
           )}
 
           <Row className='bg-light'>
-            <Col className={screen == "Mobile" ? "text-center" : null}>
+            <Col className={screen === "Mobile" ? "text-center" : null}>
               {//  style={{ maxWidth: "100%", marginTop: "8vh" }}
-              screen == "Mobile" ? (
+              screen === "Mobile" ? (
                 <div alt='' src={selfie} className='selfie-wrapper-mobile'>
                   {" "}
                   <ThreeDmobile />
                 </div>
               ) : null}
               Hi,
-              {screen == "Ipad" ? <br /> : null} I'm Gabe.
+              {screen === "Ipad" ? <br /> : null} I'm Gabe.
             </Col>
           </Row>
           <Row className='bg-light'>
-            <Col className={screen == "Mobile" ? "text-center" : null}>
+            <Col className={screen === "Mobile" ? "text-center" : null}>
               I build websites.
             </Col>
           </Row>
           <Row className='bg-light'>
             <Col className='small-text px-3'>
-              Node.js - React{screen == "Ipad" ? <br /> : null}
-              {screen != "Ipad" ? " -" : null} Javascript - Typescript
+              Node.js - React{screen === "Ipad" ? <br /> : null}
+              {screen !== "Ipad" ? " -" : null} Javascript - Typescript
               <a href='#contact'>
                 {" "}
                 <button className='contact-button'>Contact Me!</button>
@@ -174,7 +170,7 @@ const HomeMain = () => {
           >
             <path
               fill='#7f6ceb'
-              fill-opacity='1'
+              fillOpacity='1'
               d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
             ></path>
           </svg>
@@ -196,7 +192,7 @@ const HomeMain = () => {
           >
             <path
               fill='#7f6ceb'
-              fill-opacity='1'
+              fillOpacity='1'
               d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
             ></path>
           </svg>
@@ -221,7 +217,7 @@ const HomeMain = () => {
         >
           <path
             fill='#9781ff'
-            fill-opacity='1'
+            fillOpacity='1'
             d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
           ></path>
         </svg>
