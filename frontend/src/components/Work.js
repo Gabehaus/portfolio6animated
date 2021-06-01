@@ -65,6 +65,7 @@ const Work = () => {
       }}
       id='work'
     >
+      <Assistance />
       <Row>
         <Col className='work-title' style={{ color: "#0d0d0d" }}>
           Projects
@@ -108,8 +109,6 @@ const Work = () => {
           Assistance on large-scale projects
         </h3>
       </Row>
-
-      <Assistance />
     </div>
   )
 }
