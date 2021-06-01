@@ -16,11 +16,13 @@ const Assistance = () => {
             style={{ border: "none 2px white" }}
             // className='mt-1 mb-5'
           >
-            <img
-              src={NANOGPNG}
-              alt='NANOG SITE UPGRADE'
-              className='computer-image2'
-            ></img>
+            <div style={{ marginBottom: "3vw" }}>
+              <img
+                src={NANOGPNG}
+                alt='NANOG SITE UPGRADE'
+                className='computer-image2'
+              ></img>
+            </div>
           </Col>
           <Col md={5} className='mt-0 mb-5'>
             <Row>
