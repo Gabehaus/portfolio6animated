@@ -14,7 +14,7 @@ const Assistance = () => {
           <Col
             md={5}
             style={{ border: "none 2px white" }}
-            className='mt-1 mb-5'
+            // className='mt-1 mb-5'
           >
             <img
               src={NANOGPNG}

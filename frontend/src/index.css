@@ -206,6 +206,7 @@ curved-div - 9 */
     margin-left: 50%;
     transform: translateX(-50%);
     max-width: 92%;
+    margin-bottom: 4vw !important;
   }
 
   .paragraph {
