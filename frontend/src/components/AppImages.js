@@ -28,7 +28,7 @@ const AppImages = ({ images }) => {
         <Row
           className='justify-content-center'
           style={{ border: "none 2px pink" }}
-          key={uuidv4()}
+          key={project.name}
         >
           <Col
             md={5}
