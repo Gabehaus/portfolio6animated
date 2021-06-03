@@ -8,12 +8,10 @@ const AppImages = ({ images }) => {
   return (
     <div
       className='app-image-wrapper'
-      //   style={{
-      //     margin: "auto",
-      //     border: "none 2px blue",
-      //     maxWidth: "70vw",
-      //     marginTop: "7vh"
-      //   }}
+      style={{
+        border: "solid 2px pink !important",
+        background: "red !important"
+      }}
     >
       {/* <Row
         className='justify-content-center'
@@ -27,7 +25,7 @@ const AppImages = ({ images }) => {
       {data.properties.map((project, index) => (
         <Row
           className='justify-content-center'
-          style={{ border: "none 2px pink" }}
+          style={{ border: "none 2px pink", background: "red" }}
           key={project.name}
         >
           <Col

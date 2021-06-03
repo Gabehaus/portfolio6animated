@@ -60,6 +60,7 @@ const Work = () => {
         position: "relative",
         background: "#9e92f7", //#9781ff
         minHeight: "90vh",
+        maxWidth: "100vw",
         marginTop: window.innerWidth < 950 ? "-5px" : null
         // border: "solid 3px pink"
       }}
@@ -80,7 +81,9 @@ const Work = () => {
       </Row>
       <Row>
         {/* {finished ? <AppImages images={slideImagesPreloaded} /> : null} */}
-        <AppImages images={slideImagesPreloaded} />
+        <div style={{ maxWidth: "100vw" }}>
+          <AppImages images={slideImagesPreloaded} />
+        </div>
         {/* {slideImagesPreloaded
           ? data.properties.map((project, index) => (
               <Col lg={6} md={6} sm={5} key={uuid()}>
@@ -97,7 +100,7 @@ const Work = () => {
       </Row>
       <Row className='mt-5'>
         <Col className='work-title mt-5' style={{ color: "#0d0d0d" }}>
-          Dev Assistance
+          Assistance
         </Col>
       </Row>
       <Row>
@@ -105,7 +108,7 @@ const Work = () => {
           className='project-desc1 text-center font-italic mt-3'
           style={{ color: "#0d0d0d" }}
         >
-          Assistance on large-scale projects
+          Assistance on client projects
         </h3>
       </Row>
       <Assistance />

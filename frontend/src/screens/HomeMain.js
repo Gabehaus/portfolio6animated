@@ -186,7 +186,7 @@ const HomeMain = () => {
             ></path>
           </svg>
         </div>
-        <Skills skill={skill} />
+        {/* <Skills skill={skill} /> */}
 
         <div
           className='curve-wrapper-bottom'
@@ -214,7 +214,7 @@ const HomeMain = () => {
           }}
         >
           {" "}
-          <Contact />
+          {/* <Contact /> */}
         </div>
       </div>
       <div
