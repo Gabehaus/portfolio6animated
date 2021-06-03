@@ -92,7 +92,12 @@ const HomeMain = () => {
 
   return (
     <div
-      style={{ background: "#0d0d0d", minHeight: "90vh", minWidth: "100vw" }}
+      style={{
+        background: "#0d0d0d",
+        minHeight: "90vh",
+        minWidth: "100vw",
+        maxWidth: "100vw"
+      }}
     >
       <Row>
         <Col
@@ -101,7 +106,12 @@ const HomeMain = () => {
           md={6}
           sm={5}
           className='hi-box'
-          style={{ marginRight: "0 !important", marginTop: "3vh !important" }}
+          style={{
+            marginRight: "0 !important",
+            marginTop: "3vh !important",
+
+            maxWidth: "100vw"
+          }}
         >
           {/* beginning of rows */}
           {window.innerWidth < 800 ? null : (
@@ -198,7 +208,11 @@ const HomeMain = () => {
             ></path>
           </svg>
         </div>
-        <div style={{ display: "inline-block !important" }}>
+        <div
+          style={{
+            display: "inline-block !important"
+          }}
+        >
           {" "}
           <Contact />
         </div>

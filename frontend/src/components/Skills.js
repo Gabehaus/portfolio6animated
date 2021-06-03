@@ -46,7 +46,7 @@ const Skills = ({ skill }) => {
   }, [])
 
   return (
-    <div className='skills' id='skills'>
+    <div className='skills' id='skills' style={{ maxWidth: "100vw" }}>
       <Row className='justify-content-center no-gutters' style={{}}>
         <Col lg={4} md={12} className='what-im-into'>
           <Col

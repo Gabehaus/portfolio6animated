@@ -22,10 +22,13 @@ const mailControllerFunction = asyncHandler(async (req, res) => {
 
   nodemailerMailgun.sendMail(
     {
-      from: "Gabehaus@gmail.com",
+      from: email,
       to: "Gabehaus@gmail.com", // An array if you have multiple recipients.
-      subject: "Hey you, awesome!",
-      text: "Mailgun rocks, pow pow!"
+      subject: "message from portfolio viewer",
+      html: `<ul>
+        <li>Name: ${name}</li>
+        <li>Message: ${message}</li>
+      </ul>`
     },
     (err, info) => {
       if (err) {

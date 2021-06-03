@@ -178,8 +178,7 @@ class BubbleChart1c extends React.Component {
           height={"51vh"}
           style={{
             marginTop: "0vh",
-            marginLeft: "50%",
-            transform: "translateX(-50%)",
+
             background: "transparent"
           }}
         >
