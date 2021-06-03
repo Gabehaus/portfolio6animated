@@ -131,7 +131,7 @@ class BubbleChart1c extends React.Component {
             cx={item.x}
             cy={item.y}
             fill={color(item.v)}
-            stroke={d3.rgb(color("#ff366f")).brighter(4)}
+            stroke={d3.rgb(color("black")).brighter(4)} //#ff366f
             strokeWidth='2'
           />
         )
@@ -161,7 +161,7 @@ class BubbleChart1c extends React.Component {
           <circle
             r={this.radiusScale(item.v)}
             fill={color(item.v)}
-            stroke={d3.rgb(color(item.v)).brighter(2)}
+            stroke={d3.rgb(color("black")).brighter(2)}
             strokeWidth='2'
           />
           <text

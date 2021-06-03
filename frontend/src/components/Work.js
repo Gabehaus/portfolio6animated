@@ -58,7 +58,7 @@ const Work = () => {
     <div
       style={{
         position: "relative",
-        background: "#9781ff", //#9781ff
+        background: "#9e92f7", //#9781ff
         minHeight: "90vh",
         marginTop: window.innerWidth < 950 ? "-5px" : null
         // border: "solid 3px pink"

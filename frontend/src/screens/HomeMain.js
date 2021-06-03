@@ -9,6 +9,7 @@ import ThreeDIpad from "../components/ThreeDIpad"
 import ThreeDmobile from "../components/ThreeDmobile"
 // import BubbleChart from "../components/BubbleChart"
 import Skills from "../components/Skills"
+import Footer from "../components/Footer"
 import Aos from "aos"
 import "aos/dist/aos.css"
 
@@ -169,7 +170,7 @@ const HomeMain = () => {
             className='curve-one'
           >
             <path
-              fill='#7f6ceb'
+              fill='#9e92f7'
               fillOpacity='1'
               d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
             ></path>
@@ -191,7 +192,7 @@ const HomeMain = () => {
             style={{ zIndex: "-1 !important", float: "right !important" }}
           >
             <path
-              fill='#7f6ceb'
+              fill='#9e92f7'
               fillOpacity='1'
               d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
             ></path>
@@ -216,7 +217,7 @@ const HomeMain = () => {
           className='curve-one'
         >
           <path
-            fill='#9781ff'
+            fill='#9e92f7'
             fillOpacity='1'
             d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
           ></path>
@@ -229,6 +230,29 @@ const HomeMain = () => {
       <RenderTestVariable testVar={testReducerItem} /> */}
       {/* <RenderTestVariable testVar={skill} /> */}
       <Work />
+      <div
+        className='curve-wrapper-bottom'
+        style={{
+          position: "relative",
+          transform: "rotate(180deg)",
+          marginTop: "-1vh"
+        }}
+      >
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 1440 320'
+          style={{ zIndex: "-1 !important", float: "right !important" }}
+        >
+          <path
+            fill='#9e92f7'
+            fillOpacity='1'
+            d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
+          ></path>
+        </svg>
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }
