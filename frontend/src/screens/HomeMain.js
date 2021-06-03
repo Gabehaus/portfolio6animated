@@ -122,13 +122,13 @@ const HomeMain = () => {
 
           <Row className='bg-light'>
             <Col className={screen === "Mobile" ? "text-center" : null}>
-              {//  style={{ maxWidth: "100%", marginTop: "8vh" }}
+              {/* {//  style={{ maxWidth: "100%", marginTop: "8vh" }}
               screen === "Mobile" ? (
                 <div alt='' src={selfie} className='selfie-wrapper-mobile'>
                   {" "}
                   <ThreeDmobile />
                 </div>
-              ) : null}
+              ) : null} */}
               Hi,
               {screen === "Ipad" ? <br /> : null} I'm Gabe.
             </Col>
