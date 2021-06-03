@@ -1,56 +1,40 @@
 import asyncHandler from "express-async-handler"
 import nodemailer from "nodemailer"
-
+import mg from "nodemailer-mailgun-transport"
 // @desc    Create new order
 // @route   POST /api/orders
 // @access  Private
 const mailControllerFunction = asyncHandler(async (req, res) => {
   let { name, email, message } = req.body
 
+  const auth = {
+    auth: {
+      api_key: "4bfc70a7863df639930b35f87f2eeaa2-1d8af1f4-69939cd8",
+      domain: "sandboxf8f929f622dc47c6b6518948e21d4e1d.mailgun.org"
+    }
+  }
+
   //   let orderHTML = orderItems.map(
   //     or => `<li>Product: ${or.name}</li> ``<li>Quantity: ${or.qty}</li> `
   //   )
 
-  let smtpTransport = nodemailer.createTransport({
-    service: "Gmail",
-    port: 465,
-    auth: {
-      type: "OAuth2",
-      user: "caltekmailB2021@gmail.com",
-      pass: "45654513aB$%^",
-      clientId:
-        "195989648424-eblsmemmokfa67sptp91t0au6cpqgon7.apps.googleusercontent.com",
-      clientSecret: "heKqerSNu0isXT9rIS2QjARc",
-      refreshToken:
-        "1//04cYE_C2CeXwbCgYIARAAGAQSNwF-L9IrLMQ5dZX9Y1vcqjVx92Tk41rYYVqQksl9Crux6IoZjLWhaNpitkZmoa5wUu39UCKEnfA"
+  const nodemailerMailgun = nodemailer.createTransport(mg(auth))
+
+  nodemailerMailgun.sendMail(
+    {
+      from: "Gabehaus@gmail.com",
+      to: "Gabehaus@gmail.com", // An array if you have multiple recipients.
+      subject: "Hey you, awesome!",
+      text: "Mailgun rocks, pow pow!"
+    },
+    (err, info) => {
+      if (err) {
+        console.log(`Pebaw: ${err}`)
+      } else {
+        console.log(`Response: ${info}`)
+      }
     }
-  })
-
-  let mailOptions = {
-    from: "caltekmail2021@gmail.com",
-    to: "Gabehaus@gmail.com",
-    subject: `Portfolio contact message`,
-    html: `
-        <h3>Name</h3>
-        ${name}
-        <h3>Email</h3>
-        ${email}
-        <h3>Message</h3>
-        <p>${message}</p>
-        `
-  }
-
-  smtpTransport.sendMail(mailOptions, (error, response) => {
-    if (error) {
-      res.send(error)
-      console.log("error: ", error)
-    } else {
-      res.send("Success")
-      console.log("success")
-    }
-
-    smtpTransport.close()
-  })
+  )
 })
 
 export { mailControllerFunction }
