@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 import { useDispatch, useSelector } from "react-redux"
-import { Row, Col } from "react-bootstrap"
+import { Row, Col, Container } from "react-bootstrap"
 import Work from "../components/Work"
 import Contact from "../components/Contact"
 import ThreeD1 from "../components/ThreeD1"
@@ -96,9 +96,9 @@ const HomeMain = () => {
         background: "#0d0d0d",
         minHeight: "90vh",
         minWidth: "100vw",
-        maxWidth: "100vw",
-        margin: "0",
-        padding: "0"
+        maxWidth: "100vw !important"
+
+        // border: "solid 2px pink"
       }}
     >
       <Row>

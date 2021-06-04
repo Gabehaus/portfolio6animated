@@ -48,7 +48,7 @@ const BubbleChart4c = ({ data }) => {
     const fx = d3
       .scaleSqrt()
       .range([1, 70]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
-      .domain([minValue, maxValue])
+      .domain([this.minValue, this.maxValue])
     // console.log("value: ", value)
     return fx(value)
   }
@@ -108,7 +108,9 @@ const BubbleChart4c = ({ data }) => {
       })
 
       return (
-        <g transform={`translate(${width / 1}, ${height / 2})`}>{circles}</g>
+        <g transform={`translate(${props.width / 1}, ${props.height / 2})`}>
+          {circles}
+        </g>
       )
     }
 

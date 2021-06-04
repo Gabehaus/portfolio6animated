@@ -20,15 +20,6 @@ curved-div - 9 */
     box-sizing: border-box !important;
   }
 
-  .no-marginLR {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .no-padding {
-    padding: 0px;
-  }
-
   a:link {
     text-decoration: none;
   }
@@ -699,7 +690,7 @@ curved-div - 9 */
   .app-image-wrapper {
     max-width: 80vw !important;
     min-width: 90vw !important;
-    background: red;
+
     margin-right: 0 !important;
 
     /* margin-left: 50% !important;
