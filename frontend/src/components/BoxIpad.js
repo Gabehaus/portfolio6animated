@@ -47,7 +47,7 @@ export function BoxIpad({ id }) {
   )
   return (
     <mesh ref={mesh}>
-      <boxBufferGeometry args={[1.2, 1.2, 1.2]} attach='geometry' />
+      <icosahedronBufferGeometry attach='geometry' args={[1, 0]} />
       <meshNormalMaterial attach='material' />
     </mesh>
   )

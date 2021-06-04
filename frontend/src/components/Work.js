@@ -58,7 +58,7 @@ const Work = () => {
     <div
       style={{
         position: "relative",
-        background: "#9e92f7", //#9781ff
+        background: "#0d0d0d", //#9781ff
         minHeight: "90vh",
         border: "none 2px pink",
         maxWidth: "100vw",
@@ -67,14 +67,14 @@ const Work = () => {
       id='work'
     >
       <Row>
-        <Col className='work-title' style={{ color: "#0d0d0d" }}>
+        <Col className='work-title' style={{ color: "white" }}>
           Projects
         </Col>
       </Row>
       <Row>
         <h3
           className='project-desc1 text-center font-italic mt-3'
-          style={{ color: "black" }}
+          style={{ color: "white" }}
         >
           Front to back coding and design
         </h3>
@@ -106,14 +106,14 @@ const Work = () => {
         <Col lg={6} md={6} sm={5}></Col>
       </Row>
       <Row className='mt-5'>
-        <Col className='work-title mt-5' style={{ color: "#0d0d0d" }}>
+        <Col className='work-title mt-5' style={{ color: "white" }}>
           Assistance
         </Col>
       </Row>
       <Row>
         <h3
           className='project-desc1 text-center font-italic mt-3'
-          style={{ color: "#0d0d0d", overflowX: "hidden !important" }}
+          style={{ color: "white", overflowX: "hidden !important" }}
         >
           Assistance on client projects
         </h3>

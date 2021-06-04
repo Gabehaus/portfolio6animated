@@ -123,7 +123,7 @@ export default function Contact() {
           download
           style={{
             textDecoration: "underline",
-            color: "#da97f7"
+            color: "#4621ff"
           }}
         >
           Download My Resume

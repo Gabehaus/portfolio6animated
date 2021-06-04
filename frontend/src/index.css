@@ -72,7 +72,8 @@ curved-div - 9 */
     font-family: "Roboto", sans-serif !important;
     font-size: 2vw !important;
     font-weight: 300 !important;
-    color: #da97f7 !important;
+    color: #d67af0 !important;
+    /* #da97f7   */
   }
 
   .contact-button {
@@ -123,9 +124,9 @@ curved-div - 9 */
 
   .work-title2 {
     margin-top: 2vw !important;
-    color: #212121 !important;
+    color: white !important;
     margin-bottom: 2vw;
-    background: #9e92f7 !important;
+    background: #0d0d0d !important;
   }
 
   .work-title3 {
@@ -150,7 +151,7 @@ curved-div - 9 */
   }
 
   .project-name {
-    color: #0d0d0d;
+    color: white;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 4vh;
@@ -158,7 +159,7 @@ curved-div - 9 */
   }
 
   .project-name2 {
-    color: #0d0d0d;
+    color: white;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 4vh;
@@ -167,37 +168,37 @@ curved-div - 9 */
 
   .project-description {
     font-family: "Roboto", sans-serif;
-    color: #0d0d0d;
+    color: white;
     font-size: 0.9vw;
   }
 
   .project-tech {
     font-family: "Roboto", sans-serif;
-    color: #0d0d0d;
+    color: white;
     font-size: 0.9vw;
   }
 
   .about-button {
     border: none;
-    background: #4621ff;
+    background: #5e5cf2;
     color: white;
     border-radius: 50px;
     height: 2.3vw;
     padding-left: 2.5vw;
     padding-right: 2.5vw;
-    font-size: 1.5vh;
+    font-size: 1.8vh;
   }
 
   .visit-button {
-    background: #4621ff;
-    border: none 2px #5600ff;
+    background: #5e5cf2;
+    border: none 2px #8847ff;
     color: white;
     border-radius: 50px;
     height: 2.3vw;
     padding-left: 2.1vw;
     padding-right: 2.1vw;
-    margin-left: -7vw;
-    font-size: 1.5vh;
+    margin-left: -9vw;
+    font-size: 1.8vh;
   }
 
   .app-image-wrapper {
@@ -226,7 +227,7 @@ curved-div - 9 */
   }
 
   .paragraph {
-    color: #0d0d0d;
+    color: white;
     margin-left: 2vw;
     margin-top: -3vw !important;
     margin-bottom: 1vw;
@@ -234,9 +235,14 @@ curved-div - 9 */
     font-size: 1.5vw;
   }
 
+  .skills-background {
+    background-image: url("https://images.unsplash.com/photo-1558039573-299ec5fae2c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
+  }
+
   .skills {
     max-width: 100vw !important;
-    background: #9e92f7 !important;
+    background: #0d0d0d !important;
+
     margin-left: 0vw !important;
     margin-top: -1px !important;
     border: none 2px pink;
@@ -249,6 +255,7 @@ curved-div - 9 */
 
   .what-im-into {
     margin-top: -3vw !important;
+    background: #0d0d0d;
   }
 
   .form-box {
@@ -524,7 +531,7 @@ curved-div - 9 */
   .visit-button {
     height: 3vw;
     font-size: 1.2vw;
-    margin-left: -20px;
+    margin-left: -7vw;
   }
 
   .project-name {
@@ -750,7 +757,7 @@ curved-div - 9 */
     margin-top: -5vw !important;
     text-align: center !important;
     font-size: 5vw !important;
-    color: #937aff !important;
+    color: #d67af0 !important;
     margin-left: -3vw;
   }
 
@@ -819,6 +826,7 @@ curved-div - 9 */
   .paragraph {
     font-size: 4vw !important;
     margin-top: 2vw !important;
+    margin-bottom: 8vw !important;
     font-family: "Arial", sans-serif !important;
 
     font-weight: 600 !important;
@@ -848,11 +856,30 @@ curved-div - 9 */
   }
 
   .work-title2 {
-    margin-top: 15vw !important;
+    margin-top: 8vw !important;
   }
 
   .skills {
     min-height: 100vh;
+  }
+
+  .circle-wrapper {
+    /* border: solid 1px #937aff; */
+    border-radius: 45px;
+    width: 95%;
+    margin-left: 2.5%;
+    /* box-shadow: 5px 5px 5px #937aff !important; */
+    background: #0d0d0d !important;
+  }
+
+  .what-im-into {
+    /* border: solid 1px #937aff; */
+    max-width: 90% !important;
+    margin-left: 0.5%;
+    margin-bottom: 5vw;
+    margin-top: 5vw !important;
+    /* box-shadow: 5px 5px 5px #937aff !important; */
+    border-radius: 45px;
   }
 }
 

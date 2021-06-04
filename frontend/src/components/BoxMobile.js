@@ -47,7 +47,7 @@ export function BoxMobile({ id }) {
   )
   return (
     <mesh ref={mesh}>
-      <boxBufferGeometry args={[1.8, 1.8, 1.8]} attach='geometry' />
+      <icosahedronBufferGeometry attach='geometry' args={[1.5, 0]} />
       <meshNormalMaterial attach='material' />
     </mesh>
   )

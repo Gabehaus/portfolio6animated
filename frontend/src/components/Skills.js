@@ -46,51 +46,63 @@ const Skills = ({ skill }) => {
   }, [])
 
   return (
-    <div className='skills' id='skills' style={{ maxWidth: "100vw" }}>
-      <Row className='justify-content-center no-gutters' style={{}}>
-        <Col lg={4} md={12} className='what-im-into'>
-          <Col
-            md={12}
-            className='work-title2'
-            style={{ background: "transparent" }}
-          >
-            What I'm Into
-          </Col>{" "}
-          <Col
-            md={12}
-            className={
-              screen !== "Desktop" ? "paragraph text-center" : "paragraph"
-            }
-            style={{ background: "transparent" }}
-          >
-            From moving businesses online to building full-stack mobile apps, if
-            you can dream it I can code it. I try to think of every project I
-            work on as a coupling of art and technology. As Steve Jobs said,
-            "it's technology married with liberal arts, married with the
-            humanities, that yields us the results that make our heart sing."
+    <div className='skills-background'>
+      <div className='skills' id='skills' style={{ maxWidth: "100vw" }}>
+        <Row className='justify-content-center no-gutters' style={{}}>
+          {screen === "Mobile" ? (
+            <Col
+              lg={4}
+              md={12}
+              style={{
+                marginLeft: screen === "Desktop" ? "5vw" : "0vw",
+                border: "none 2px yellow"
+              }}
+            >
+              <SkillSelector skillSet={chart} screen={screen} skill={skill} />
+            </Col>
+          ) : null}
+          <Col lg={4} md={12} className='what-im-into'>
+            <Col
+              md={12}
+              className='work-title2'
+              style={{ background: "transparent" }}
+            >
+              What I'm Into
+            </Col>{" "}
+            <Col
+              md={12}
+              className={screen !== "Desktop" ? "paragraph" : "paragraph"}
+              style={{ background: "transparent" }}
+            >
+              From moving businesses online to building full-stack mobile apps,
+              if you can dream it I can code it. I try to think of every project
+              I work on as a coupling of art and technology. As Steve Jobs said,
+              "it's technology married with liberal arts, married with the
+              humanities, that yields us the results that make our heart sing."
+            </Col>
+            <Col md={12} style={{ border: "none 1px pink" }}>
+              {" "}
+              <Link to={resume} target='_blank' download>
+                <p className='resume-link-skills'>Download My Resume</p>
+              </Link>
+            </Col>
+            <div style={{ minHeight: "2vw" }}></div>
           </Col>
-          <Col md={12} style={{ border: "none 1px pink" }}>
-            {" "}
-            <Link to={resume} target='_blank' download>
-              <p className='resume-link-skills'>Download My Resume</p>
-            </Link>
-          </Col>
-          <div style={{ minHeight: "2vw" }}></div>
-        </Col>
+          {screen !== "Mobile" ? (
+            <Col
+              lg={4}
+              md={12}
+              style={{
+                marginLeft: screen === "Desktop" ? "5vw" : "0vw",
+                border: "none 2px yellow"
+              }}
+            >
+              <SkillSelector skillSet={chart} screen={screen} skill={skill} />
+            </Col>
+          ) : null}
+        </Row>
 
-        <Col
-          lg={4}
-          md={12}
-          style={{
-            marginLeft: screen === "Desktop" ? "5vw" : "0vw",
-            border: "none 2px yellow"
-          }}
-        >
-          <SkillSelector skillSet={chart} screen={screen} skill={skill} />
-        </Col>
-      </Row>
-
-      {/* <Row>
+        {/* <Row>
             {skill == "Front-End" ? (
               <Col
                 md={12}
@@ -126,7 +138,7 @@ const Skills = ({ skill }) => {
             ) : null}
           </Row> */}
 
-      {/* <Form className='ml-5'>
+        {/* <Form className='ml-5'>
         <div
           key={`inline-radio`}
           style={{
@@ -167,6 +179,7 @@ const Skills = ({ skill }) => {
           />
         </div>
       </Form> */}
+      </div>
     </div>
   )
 }

@@ -88,7 +88,7 @@ const BubbleChart4c = ({ data }) => {
       .scaleLinear()
       .domain([minValue, maxValue])
       .interpolate(d3.interpolateHcl)
-      .range(["#645bde", "#9d81db"])
+      .range(["#82c1ff", "#c277fc"])
 
     // render simple circle element
     //radiusScale controls size of circles

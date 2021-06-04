@@ -106,7 +106,7 @@ class BubbleChart2b extends React.Component {
       .scaleLinear()
       .domain([minValue, maxValue])
       .interpolate(d3.interpolateHcl)
-      .range(["#645bde", "#9d81db"])
+      .range(["#8a94ff", "#c277fc"])
 
     // render simple circle element
     //radiusScale controls size of circles
