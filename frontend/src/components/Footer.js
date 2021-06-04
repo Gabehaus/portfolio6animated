@@ -154,10 +154,10 @@ export default class Footer extends Component {
             style={{ display: "flex", justifyContent: "center" }}
           >
             <span className='lucidSpan' className='footer-basic-font'>
-              Lucid Media Group
-            </span>{" "}
-            &#8226; 7223 N. Knowles Ave, Portland, OR 97217 &#8226;
-            (504)931.7553
+              Lucid Media Group &#8226;
+            </span>
+            {"    "}
+            &nbsp;7223 N. Knowles Ave, Portland, OR 97217 &#8226; (504)931.7553
           </div>
           <hr />
         </div>

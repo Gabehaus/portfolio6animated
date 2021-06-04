@@ -3,12 +3,30 @@ Work - 10
 curved-div - 9 */
 
 @media (max-width: 3000px) {
+  * {
+    /* background: #000 !important;
+    color: #0f0 !important; */
+    /* outline: solid #f00 1px !important; */
+    /* max-width: 100vw !important; */
+    /* margin-left: 2vw !important; */
+  }
+
   body {
     background: #0d0d0d !important;
     overflow-x: hidden !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
     max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+
+  .no-marginLR {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .no-padding {
+    padding: 0px;
   }
 
   a:link {
@@ -106,6 +124,7 @@ curved-div - 9 */
     font-weight: 700;
     font-size: 10vh;
     text-align: center;
+
     color: white;
     margin-top: -8vh !important;
     z-index: "20";
@@ -195,12 +214,16 @@ curved-div - 9 */
     border: none 2px blue !important;
     max-width: 70vw !important;
     margin-top: 7vh !important;
+    overflow-x: hidden !important;
   }
 
   .computer-image {
-    margin-left: 50%;
+    /* margin-left: 50%;
     transform: translateX(-50%);
-    max-width: 100%;
+    max-width: 100%; */
+    margin: 0;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
 
   .computer-image2 {
@@ -543,7 +566,7 @@ curved-div - 9 */
     /* border: solid 1px pink; */
 
     font-size: 6vh;
-    text-align: center;
+    /* text-align: center; */
 
     margin-top: 5vh !important;
   }
@@ -674,9 +697,13 @@ curved-div - 9 */
 
 @media (max-width: 767px) {
   .app-image-wrapper {
-    max-width: 60vw !important;
-    margin-left: 50% !important;
-    transform: translateX(-50%) !important;
+    max-width: 80vw !important;
+    min-width: 90vw !important;
+    background: red;
+    margin-right: 0 !important;
+
+    /* margin-left: 50% !important;
+    transform: translateX(-50%) !important; */
   }
 
   .project-name {

@@ -9,7 +9,7 @@ const App = () => {
     <Router>
       <Header />
 
-      <main className='main' style={{ background: "#1f1f1f" }}>
+      <main className='main'>
         <Route path='/' component={HomeMain} exact />
       </main>
     </Router>

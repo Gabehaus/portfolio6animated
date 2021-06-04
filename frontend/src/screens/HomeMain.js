@@ -96,7 +96,9 @@ const HomeMain = () => {
         background: "#0d0d0d",
         minHeight: "90vh",
         minWidth: "100vw",
-        maxWidth: "100vw"
+        maxWidth: "100vw",
+        margin: "0",
+        padding: "0"
       }}
     >
       <Row>
@@ -122,13 +124,13 @@ const HomeMain = () => {
 
           <Row className='bg-light'>
             <Col className={screen === "Mobile" ? "text-center" : null}>
-              {/* {//  style={{ maxWidth: "100%", marginTop: "8vh" }}
+              {//  style={{ maxWidth: "100%", marginTop: "8vh" }}
               screen === "Mobile" ? (
                 <div alt='' src={selfie} className='selfie-wrapper-mobile'>
                   {" "}
                   <ThreeDmobile />
                 </div>
-              ) : null} */}
+              ) : null}
               Hi,
               {screen === "Ipad" ? <br /> : null} I'm Gabe.
             </Col>
@@ -186,7 +188,7 @@ const HomeMain = () => {
             ></path>
           </svg>
         </div>
-        {/* <Skills skill={skill} /> */}
+        <Skills skill={skill} />
 
         <div
           className='curve-wrapper-bottom'
@@ -214,7 +216,7 @@ const HomeMain = () => {
           }}
         >
           {" "}
-          {/* <Contact /> */}
+          <Contact />
         </div>
       </div>
       <div

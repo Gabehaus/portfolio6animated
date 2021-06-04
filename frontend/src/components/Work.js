@@ -60,9 +60,9 @@ const Work = () => {
         position: "relative",
         background: "#9e92f7", //#9781ff
         minHeight: "90vh",
+
         maxWidth: "100vw",
         marginTop: window.innerWidth < 950 ? "-5px" : null
-        // border: "solid 3px pink"
       }}
       id='work'
     >
@@ -72,18 +72,27 @@ const Work = () => {
         </Col>
       </Row>
       <Row>
-        <h3
-          className='project-desc1 text-center font-italic mt-3'
-          style={{ color: "black" }}
-        >
-          Front to back coding and design
-        </h3>
+        <Col>
+          <h3
+            className='project-desc1 text-center font-italic mt-3'
+            style={{ color: "black" }}
+          >
+            Front to back coding and design
+          </h3>
+        </Col>
       </Row>
       <Row>
         {/* {finished ? <AppImages images={slideImagesPreloaded} /> : null} */}
-        <div style={{ maxWidth: "100vw" }}>
-          <AppImages images={slideImagesPreloaded} />
-        </div>
+        {/* <div
+          style={{
+            maxWidth: "100vw",
+            border: "solid 2px pink",
+            minWidth: "100vw !important",
+            marginLeft: "none"
+          }}
+        > */}
+        <AppImages images={slideImagesPreloaded} />
+        {/* </div> */}
         {/* {slideImagesPreloaded
           ? data.properties.map((project, index) => (
               <Col lg={6} md={6} sm={5} key={uuid()}>
@@ -98,7 +107,7 @@ const Work = () => {
         </Col>
         <Col lg={6} md={6} sm={5}></Col>
       </Row>
-      <Row className='mt-5'>
+      <Row className='mt-5' style={{ maxWidth: "100vw" }}>
         <Col className='work-title mt-5' style={{ color: "#0d0d0d" }}>
           Assistance
         </Col>
