@@ -60,7 +60,7 @@ const Work = () => {
         position: "relative",
         background: "#9e92f7", //#9781ff
         minHeight: "90vh",
-
+        border: "none 2px pink",
         maxWidth: "100vw",
         marginTop: window.innerWidth < 950 ? "-5px" : null
       }}
@@ -72,14 +72,12 @@ const Work = () => {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <h3
-            className='project-desc1 text-center font-italic mt-3'
-            style={{ color: "black" }}
-          >
-            Front to back coding and design
-          </h3>
-        </Col>
+        <h3
+          className='project-desc1 text-center font-italic mt-3'
+          style={{ color: "black" }}
+        >
+          Front to back coding and design
+        </h3>
       </Row>
       <Row>
         {/* {finished ? <AppImages images={slideImagesPreloaded} /> : null} */}
@@ -107,7 +105,7 @@ const Work = () => {
         </Col>
         <Col lg={6} md={6} sm={5}></Col>
       </Row>
-      <Row className='mt-5' style={{ maxWidth: "100vw" }}>
+      <Row className='mt-5'>
         <Col className='work-title mt-5' style={{ color: "#0d0d0d" }}>
           Assistance
         </Col>
@@ -115,7 +113,7 @@ const Work = () => {
       <Row>
         <h3
           className='project-desc1 text-center font-italic mt-3'
-          style={{ color: "#0d0d0d" }}
+          style={{ color: "#0d0d0d", overflowX: "hidden !important" }}
         >
           Assistance on client projects
         </h3>

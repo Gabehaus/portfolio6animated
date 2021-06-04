@@ -34,7 +34,9 @@ export default function ThreeD1() {
     <Canvas
       style={{
         width: "100%",
-        height: "50vh"
+        height: "50vh",
+
+        marginLeft: "9vw"
       }}
     >
       {boxes.map(id => (

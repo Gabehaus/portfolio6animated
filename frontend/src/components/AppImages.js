@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 // import { useDispatch, useSelector } from "react-redux"
-import { Row, Col, Button, Image } from "react-bootstrap"
+import { Row, Col, Button } from "react-bootstrap"
 import { uuid } from "uuidv4"
 import { data } from "../data"
 
@@ -9,6 +9,7 @@ const AppImages = ({ images }) => {
 
   return (
     <Col
+      lg={12}
       className='app-image-wrapper'
       //   style={{
       //     margin: "auto",
@@ -17,19 +18,22 @@ const AppImages = ({ images }) => {
       //     marginTop: "7vh"
       //   }}
     >
-      {/* <Row
-        className='justify-content-center'
-        style={{ border: "none 2px pink" }}
-      > */}
-
+      {/* {images.map(img => (
+          <Col>
+            <img src={img}></img>
+          </Col>
+        ))} */}
       {data.properties.map((project, index) => (
-        <React.Fragment>
+        <Row
+          className='justify-content-center app-box'
+          style={{ border: "none 2px pink" }}
+        >
           <Col
             md={5}
             style={{ border: "none 2px white" }}
             className='mt-5 mb-3'
           >
-            <Image src={images[index]} className='mb-5 computer-image'></Image>
+            <img src={images[index]} className={project.className}></img>
           </Col>
           <Col md={5} style={{ border: "none 2px grey" }} className='mt-5 mb-3'>
             <Row>
@@ -64,9 +68,8 @@ const AppImages = ({ images }) => {
               </Col>
             </Row>
           </Col>
-        </React.Fragment>
+        </Row>
       ))}
-      {/* </Row> */}
     </Col>
   )
 }
