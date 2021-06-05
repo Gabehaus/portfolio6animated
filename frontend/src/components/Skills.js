@@ -50,16 +50,25 @@ const Skills = ({ skill }) => {
       <div className='skills' id='skills' style={{ maxWidth: "100vw" }}>
         <Row className='justify-content-center no-gutters' style={{}}>
           {screen === "Mobile" ? (
-            <Col
-              lg={4}
-              md={12}
-              style={{
-                marginLeft: screen === "Desktop" ? "5vw" : "0vw",
-                border: "none 2px yellow"
-              }}
-            >
-              <SkillSelector skillSet={chart} screen={screen} skill={skill} />
-            </Col>
+            <React.Fragment>
+              <Col
+                md={12}
+                className='work-title2'
+                style={{ background: "transparent" }}
+              >
+                What I use
+              </Col>
+              <Col
+                md={12}
+                style={{
+                  marginLeft: screen === "Desktop" ? "5vw" : "0vw",
+                  border: "none 2px yellow"
+                }}
+                className='mb-5'
+              >
+                <SkillSelector skillSet={chart} screen={screen} skill={skill} />
+              </Col>
+            </React.Fragment>
           ) : null}
           <Col lg={4} md={12} className='what-im-into'>
             <Col
