@@ -49,31 +49,10 @@ const Skills = ({ skill }) => {
     <div className='skills-background'>
       <div className='skills' id='skills' style={{ maxWidth: "100vw" }}>
         <Row className='justify-content-center no-gutters' style={{}}>
-          {screen === "Mobile" ? (
-            <React.Fragment>
-              <Col
-                md={12}
-                className='work-title2'
-                style={{ background: "transparent" }}
-              >
-                What I use
-              </Col>
-              <Col
-                md={12}
-                style={{
-                  marginLeft: screen === "Desktop" ? "5vw" : "0vw",
-                  border: "none 2px yellow"
-                }}
-                className='mb-5'
-              >
-                <SkillSelector skillSet={chart} screen={screen} skill={skill} />
-              </Col>
-            </React.Fragment>
-          ) : null}
           <Col lg={4} md={12} className='what-im-into'>
             <Col
               md={12}
-              className='work-title2'
+              className='work-title2 mt-5'
               style={{ background: "transparent" }}
             >
               What I'm Into
@@ -89,6 +68,31 @@ const Skills = ({ skill }) => {
               "it's technology married with liberal arts, married with the
               humanities, that yields us the results that make our heart sing."
             </Col>
+            {screen === "Mobile" ? (
+              <React.Fragment>
+                <Col
+                  md={12}
+                  className='work-title2'
+                  style={{ background: "transparent" }}
+                >
+                  What I use
+                </Col>
+                <Col
+                  md={12}
+                  style={{
+                    marginLeft: "0vw",
+                    border: "none 2px yellow"
+                  }}
+                  className='mb-5'
+                >
+                  <SkillSelector
+                    skillSet={chart}
+                    screen={screen}
+                    skill={skill}
+                  />
+                </Col>
+              </React.Fragment>
+            ) : null}
             <Col md={12} style={{ border: "none 1px pink" }}>
               {" "}
               <Link to={resume} target='_blank' download>

@@ -34,7 +34,7 @@ const SkillSelector = ({ skillSet, screen, skill }) => {
   })
 
   return (
-    <div className='circle-wrapper'>
+    <div id='circle-wrapper'>
       {screen === "Desktop" ? (
         skill === "Front-End" ? (
           <BubbleChart useLabels data={rawdata4} />

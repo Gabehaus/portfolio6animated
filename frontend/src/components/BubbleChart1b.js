@@ -1,5 +1,6 @@
 import React from "react"
 import * as d3 from "d3"
+
 var _ = require("lodash")
 
 class BubbleChart1b extends React.Component {

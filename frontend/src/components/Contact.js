@@ -116,14 +116,14 @@ export default function Contact() {
           Submit
         </Button>
       </Form>
-      <div>
+      <div className='resume-link'>
         <Link
           to={resume}
           target='_blank'
           download
           style={{
             textDecoration: "underline",
-            color: "#4621ff"
+            color: "#555eff"
           }}
         >
           Download My Resume

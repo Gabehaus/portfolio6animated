@@ -1,5 +1,6 @@
 import React from "react"
 import * as d3 from "d3"
+
 var _ = require("lodash")
 
 class BubbleChart1c extends React.Component {
@@ -143,7 +144,7 @@ class BubbleChart1c extends React.Component {
       return (
         <g
           key={index}
-          transform={`translate(${props.width / 3.3 + item.x}, ${props.height /
+          transform={`translate(${props.width / 3.9 + item.x}, ${props.height /
             2 +
             item.y})`} //divisors originally were of value 2, this is how to move circles inside square 3, 1.7, 1.3
         >
@@ -174,12 +175,10 @@ class BubbleChart1c extends React.Component {
     if (this.state.data.length) {
       return (
         <svg
-          width={"100vw"} // "#0d0d0d"
+          width={"90vw"} // "#0d0d0d"
           height={"51vh"}
           style={{
-            marginTop: "0vh",
-
-            background: "transparent"
+            marginTop: "0vh"
           }}
         >
           {this.renderBubbles(this.state.data)}

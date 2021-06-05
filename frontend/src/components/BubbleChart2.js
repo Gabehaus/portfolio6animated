@@ -117,7 +117,7 @@ class BubbleChart1c extends React.Component {
       .scaleLinear()
       .domain([minValue, maxValue])
       .interpolate(d3.interpolateHcl)
-      .range(["#8a94ff", "#c277fc"])
+      .range(["#4f7bff", "#c457f7"])
 
     // render simple circle element
     //radiusScale controls size of circles
@@ -154,7 +154,7 @@ class BubbleChart1c extends React.Component {
         <g
           key={index}
           transform={`translate(${props.width / 3 + item.x}, ${props.height /
-            2 +
+            2.2 +
             item.y})`} //divisors originally were of value 2, this is how to move circles inside square 3, 1.7, 1.3
         >
           <circle
@@ -192,7 +192,7 @@ class BubbleChart1c extends React.Component {
             background: "transparent",
             overflow: "visible"
           }}
-          data-aos={window.innerWidth > 800 ? "fade-in" : null}
+          data-aos='fade-in'
           data-aos-easing='linear'
           data-aos-duration='1000'
         >

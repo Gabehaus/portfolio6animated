@@ -1,37 +1,31 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 // import { useDispatch, useSelector } from "react-redux"
 import { Row, Col, Image } from "react-bootstrap"
 import NANOGPNG from "../images/apps/NANOGPNG.png"
 
-const Assistance = () => {
+const AppImages2 = () => {
   return (
-    <div className='app-image-wrapper'>
+    <Col lg={12} className='app-image-wrapper'>
       <Row
-        className='justify-content-center'
-        style={{ border: "none 2px white" }}
+        className='justify-content-center app-box'
+        style={{ border: "none 2px pink" }}
       >
-        <Col md={5} style={{ border: "none 2px white" }} className='mt-1 mb-5'>
-          <Image
-            src={NANOGPNG}
-            alt='NANOG SITE UPGRADE'
-            className='computer-image2'
-          ></Image>
+        <Col md={5} style={{ border: "none 2px white" }} className='mt-5 mb-3'>
+          <img src={NANOGPNG} className='computer-image'></img>
         </Col>
-        <Col md={5} className='mt-5 mb-5'>
+        <Col md={5} style={{ border: "none 2px grey" }} className='mt-5 mb-3'>
           <Row>
-            <Col className='project-name mt-1'>NANOG Site Upgrade</Col>
+            <Col className='project-name'>NANOG SITE UPGRADE</Col>
           </Row>
           <Row>
-            <Col
-              className='project-description px-3 mt-2'
-              style={{ maxWidth: "35vw" }}
-            >
+            <Col className='project-description px-3 mt-2'>
               Devized and executed a plan to scrape data from old versions of
               company site and format it for use on new site.
             </Col>
           </Row>
           <Row>
             <Col className='mt-3 project-tech px-3'>
+              {" "}
               React - JSON - Git - RegEx
             </Col>
           </Row>
@@ -44,7 +38,6 @@ const Assistance = () => {
               <a
                 href='https://www.nanog.org/'
                 target='_blank'
-                rel='noreferrer'
                 className='button-anchor'
               >
                 <button className='about-button'>About</button>
@@ -54,7 +47,6 @@ const Assistance = () => {
               <a
                 href='https://www.nanog.org/'
                 target='_blank'
-                rel='noreferrer'
                 className='button-anchor'
               >
                 <button className='visit-button'>Visit Site</button>
@@ -63,8 +55,8 @@ const Assistance = () => {
           </Row>
         </Col>
       </Row>
-    </div>
+    </Col>
   )
 }
 
-export default Assistance
+export default AppImages2

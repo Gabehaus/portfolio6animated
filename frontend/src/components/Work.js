@@ -5,6 +5,7 @@ import Aos from "aos"
 import "aos/dist/aos.css"
 
 import AppImages from "./AppImages"
+import AppImages2 from "./AppImages2"
 import Assistance from "./Assistance"
 import calculatorPNG from "../images/apps/calculatorPNG.png"
 import clockBPNG from "../images/apps/clockBPNG.png"
@@ -79,7 +80,7 @@ const Work = () => {
           Front to back coding and design
         </h3>
       </Row>
-      <Row>
+      <Row className='mb-5'>
         {/* {finished ? <AppImages images={slideImagesPreloaded} /> : null} */}
         {/* <div
           style={{
@@ -105,7 +106,7 @@ const Work = () => {
         </Col>
         <Col lg={6} md={6} sm={5}></Col>
       </Row>
-      <Row className='mt-5'>
+      <Row>
         <Col className='work-title mt-5' style={{ color: "white" }}>
           Assistance
         </Col>
@@ -113,12 +114,37 @@ const Work = () => {
       <Row>
         <h3
           className='project-desc1 text-center font-italic mt-3'
-          style={{ color: "white", overflowX: "hidden !important" }}
+          style={{ color: "white" }}
         >
           Assistance on client projects
         </h3>
       </Row>
-      <Assistance />
+      <Row>
+        {/* {finished ? <AppImages images={slideImagesPreloaded} /> : null} */}
+        {/* <div
+          style={{
+            maxWidth: "100vw",
+            border: "solid 2px pink",
+            minWidth: "100vw !important",
+            marginLeft: "none"
+          }}
+        > */}
+        <AppImages2 images={slideImagesPreloaded} />
+        {/* </div> */}
+        {/* {slideImagesPreloaded
+          ? data.properties.map((project, index) => (
+              <Col lg={6} md={6} sm={5} key={uuid()}>
+                <img src={slideImagesPreloaded[index]}></img>
+              </Col>
+            ))
+          : null} */}
+        <Col lg={6} md={6} sm={5}>
+          {/* {slideImagesPreloaded.length > 1 ? (
+            <img src={slideImagesPreloaded[3]}></img>
+          ) : null} */}
+        </Col>
+        <Col lg={6} md={6} sm={5}></Col>
+      </Row>
     </div>
   )
 }
