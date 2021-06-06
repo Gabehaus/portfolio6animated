@@ -6,7 +6,7 @@ import "aos/dist/aos.css"
 
 import AppImages from "./AppImages"
 import AppImages2 from "./AppImages2"
-import Assistance from "./Assistance"
+
 import calculatorPNG from "../images/apps/calculatorPNG.png"
 import clockBPNG from "../images/apps/clockBPNG.png"
 import drumPNG from "../images/apps/drumPNG.png"

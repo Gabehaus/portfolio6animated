@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 // import { useDispatch, useSelector } from "react-redux"
-import { Row, Col, Button } from "react-bootstrap"
-import { uuid } from "uuidv4"
+import { Row, Col } from "react-bootstrap"
+
 import { data } from "../data"
 
 const AppImages = ({ images }) => {
-  const len = images.length
-
   return (
     <Col
       lg={12}
@@ -27,13 +25,18 @@ const AppImages = ({ images }) => {
         <Row
           className='justify-content-center app-box'
           style={{ border: "none 2px pink" }}
+          key={project.name}
         >
           <Col
             md={5}
             style={{ border: "none 2px white" }}
             className='mt-5 mb-3'
           >
-            <img src={images[index]} className={project.className}></img>
+            <img
+              src={images[index]}
+              alt={project.name}
+              className={project.className}
+            ></img>
           </Col>
           <Col md={5} style={{ border: "none 2px grey" }} className='mt-5 mb-3'>
             <Row>
@@ -56,13 +59,19 @@ const AppImages = ({ images }) => {
                 <a
                   href={project.diary}
                   target='_blank'
+                  rel='noreferrer'
                   className='button-anchor'
                 >
                   <button className='about-button'>About</button>
                 </a>
               </Col>
               <Col xs={5} className='mt-3' style={{ position: "relative" }}>
-                <a href={project.app} target='_blank' className='button-anchor'>
+                <a
+                  href={project.app}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='button-anchor'
+                >
                   <button className='visit-button'>Visit Site</button>
                 </a>
               </Col>

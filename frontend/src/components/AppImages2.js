@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 // import { useDispatch, useSelector } from "react-redux"
-import { Row, Col, Image } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import NANOGPNG from "../images/apps/NANOGPNG.png"
 
 const AppImages2 = () => {
@@ -11,7 +11,7 @@ const AppImages2 = () => {
         style={{ border: "none 2px pink" }}
       >
         <Col md={5} style={{ border: "none 2px white" }} className='mt-5 mb-3'>
-          <img src={NANOGPNG} className='computer-image'></img>
+          <img src={NANOGPNG} alt='NANOG' className='computer-image'></img>
         </Col>
         <Col md={5} style={{ border: "none 2px grey" }} className='mt-5 mb-3'>
           <Row>
@@ -38,6 +38,7 @@ const AppImages2 = () => {
               <a
                 href='https://www.nanog.org/'
                 target='_blank'
+                rel='noreferrer'
                 className='button-anchor'
               >
                 <button className='about-button'>About</button>
@@ -47,6 +48,7 @@ const AppImages2 = () => {
               <a
                 href='https://www.nanog.org/'
                 target='_blank'
+                rel='noreferrer'
                 className='button-anchor'
               >
                 <button className='visit-button'>Visit Site</button>

@@ -35,7 +35,7 @@ class BubbleChart2b extends React.Component {
     this.renderBubbles = this.renderBubbles.bind(this)
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.mounted = true
   }
 
