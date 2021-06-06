@@ -261,8 +261,8 @@ curved-div - 9 */
   }
 
   .rounded-0 {
-    background: #9c78ff !important;
-    border: 1px solid #9c78ff !important;
+    background: #928aff !important;
+    border: 1px solid #928aff !important;
   }
 
   ::placeholder {
@@ -779,7 +779,7 @@ curved-div - 9 */
     margin-top: -5vw !important;
     text-align: center !important;
     font-size: 5vw !important;
-    color: #d67af0 !important;
+    color: #b0b9ff !important;
     margin-left: -1vw;
   }
 
