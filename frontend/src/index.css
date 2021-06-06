@@ -176,7 +176,7 @@ curved-div - 9 */
 
   .about-button {
     border: none;
-    background: #5e5cf2;
+    background: #7c73ff;
     color: white;
     border-radius: 50px;
     height: 2.3vw;
@@ -186,7 +186,7 @@ curved-div - 9 */
   }
 
   .visit-button {
-    background: #5e5cf2;
+    background: #7c73ff;
     border: none 2px #8847ff;
     color: white;
     border-radius: 50px;
@@ -781,6 +781,10 @@ curved-div - 9 */
     font-size: 5vw !important;
     color: #7c73ff !important;
     margin-left: -1vw;
+  }
+
+  .blue-text {
+    color: #a49eff;
   }
 
   .contact-button {

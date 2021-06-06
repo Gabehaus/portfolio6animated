@@ -66,21 +66,24 @@ const Skills = ({ skill }) => {
             className='work-title2 mt-5'
             style={{ background: "transparent" }}
           >
-            What I'm Into
+            What I'm into
           </Col>{" "}
           <Col
             md={12}
             className={screen !== "Desktop" ? "paragraph" : "paragraph"}
             style={{ background: "transparent" }}
           >
-            From moving businesses online to building full-stack mobile apps, if
-            you can dream it I can code it. I try to think of every project I
-            work on as a coupling of art and technology. As Steve Jobs said,
-            "it's technology married with liberal arts, married with the
+            From <span className='blue-text'>moving businesses online </span>to
+            building <span className='blue-text'>full-stack mobile apps</span>,
+            if you can dream it I can code it. I try to think of every project I
+            work on as a coupling of{" "}
+            <span className='blue-text'>art and technology</span>. As Steve Jobs
+            said, "it's technology married with liberal arts, married with the
             humanities, that yields us the results that make our heart sing."
           </Col>
           {screen === "Mobile" ? (
             <Col className='white-i-use-plus-skills'>
+              å
               <React.Fragment>
                 <Col
                   md={12}

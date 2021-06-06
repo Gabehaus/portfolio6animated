@@ -80,7 +80,7 @@ const Work = () => {
       <Row>
         <h3
           className='project-desc1 text-center font-italic mt-3'
-          style={{ color: "white" }}
+          style={{ color: "#7c73ff " }}
         >
           Front to back coding and design
         </h3>
