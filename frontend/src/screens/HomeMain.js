@@ -111,7 +111,7 @@ const HomeMain = () => {
           )}
 
           <Row className='bg-light'>
-            <Col className={screen === "Mobile" ? "text" : null}>
+            <Col className='text'>
               {//  style={{ maxWidth: "100%", marginTop: "8vh" }}
               screen === "Mobile" ? (
                 <div alt='' src={selfie} className='selfie-wrapper-mobile'>
@@ -126,18 +126,15 @@ const HomeMain = () => {
             </Col>
           </Row>
           <Row className='bg-light'>
-            <Col className={screen === "Mobile" ? "text" : null}>
+            <Col className={screen === "Mobile" ? "text" : "i-build-websites"}>
               I build websites
             </Col>
           </Row>
-          <Row className='bg-light' style={{ background: "red !important" }}>
-            <Col
-              className='small-text px-3'
-              style={{ background: "red !important" }}
-            >
+          <Row className='bg-light'>
+            <Col className='small-text px-3'>
               Node.js - React{screen === "Ipad" ? <br /> : null}
               {screen !== "Ipad" ? " -" : null} Javascript - Typescript
-              <a href='#contact' style={{ background: "red !important" }}>
+              <a href='#contact'>
                 {" "}
                 <button
                   className='contact-button'

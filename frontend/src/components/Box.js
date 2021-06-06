@@ -26,7 +26,7 @@ export const useStore = create(set => ({
       for (let i = 0; i < state.boxes.length; i++) {
         const id = state.boxes[i]
         const [x, y, z] = state.coordinates[id]
-        coordinates[id] = [x + 0.00055, y + 0.00055, z + 0.00055]
+        coordinates[id] = [x + 0.00075, y + 0.00075, z + 0.00075]
       }
       return { ...state, coordinates }
     })

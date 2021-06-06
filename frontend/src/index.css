@@ -72,7 +72,7 @@ curved-div - 9 */
     font-family: "Roboto", sans-serif !important;
     font-size: 2vw !important;
     font-weight: 300 !important;
-    color: #d67af0 !important;
+    color: #da97f7 !important;
     /* #da97f7   */
   }
 
@@ -238,7 +238,7 @@ curved-div - 9 */
     background: #0d0d0d !important;
 
     margin-left: 0vw !important;
-    margin-top: 10vw !important;
+    margin-top: 13vw !important;
     border: none 2px pink;
   }
 
@@ -313,7 +313,7 @@ curved-div - 9 */
     grid-template-rows: auto auto auto auto;
     grid-gap: 10px;
 
-    margin-top: 7vh;
+    margin-top: 16vh;
     padding: 10px;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -495,7 +495,11 @@ curved-div - 9 */
 
   .hi-text {
     margin-bottom: -1.2vw;
-    margin-top: 1vw;
+    margin-top: -0vw;
+  }
+
+  .i-build-websites {
+    padding-top: 1vw;
   }
 
   .app-box {
@@ -840,7 +844,7 @@ curved-div - 9 */
   .paragraph {
     font-size: 4vw !important;
     margin-top: 6vw !important;
-    margin-bottom: 50vw !important;
+    margin-bottom: 40vw !important;
     font-family: "Arial", sans-serif !important;
     /* margin-left: -13vw !important; */
     font-weight: 600 !important;

@@ -117,7 +117,7 @@ class BubbleChart1c extends React.Component {
       .scaleLinear()
       .domain([minValue, maxValue])
       .interpolate(d3.interpolateHcl)
-      .range(["#4f7bff", "#c457f7"])
+      .range(["#4f7bff", "#be68fc"])
 
     if (!this.props.useLabels) {
       const circles = _.map(data, (item, index) => {
