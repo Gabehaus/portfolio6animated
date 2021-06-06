@@ -698,7 +698,7 @@ curved-div - 9 */
   .paragraph {
     margin-left: 0vw;
     padding-left: 8vw !important;
-    padding-right: 40px;
+    padding-right: 6vw !important;
     font-size: 3vw;
     text-align: center !important;
   }
