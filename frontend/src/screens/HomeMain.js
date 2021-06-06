@@ -176,98 +176,25 @@ const HomeMain = () => {
         </Col>
         {/* <Skills skill={skill} /> */}
       </Row>
-      <div className='curve-wrapper'>
-        <div style={{ position: "relative" }}>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            viewBox='0 0 1440 320'
-            className='curve-one'
-          >
-            <path
-              fill={screen !== "Mobile" ? "#0d0d0d" : "#0d0d0d"}
-              fillOpacity='1'
-              d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
-            ></path>
-          </svg>
-        </div>
-        <Skills skill={skill} />
 
-        <div
-          className='curve-wrapper-bottom'
-          style={{
-            position: "relative",
-            transform: "rotate(180deg)",
-            marginTop: "-1vh"
-          }}
-        >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            viewBox='0 0 1440 320'
-            style={{ zIndex: "-1 !important", float: "right !important" }}
-          >
-            <path
-              fill='#0d0d0d'
-              fillOpacity='1'
-              d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
-            ></path>
-          </svg>
-        </div>
-        <div
-          style={{
-            display: "inline-block !important"
-          }}
-        >
-          {" "}
-          <Contact />
-        </div>
-      </div>
-      <div
-        style={{
-          position: "relative",
-          // transform: "rotate(180deg)",
-          marginTop: "-1vh",
-          background: "#0d0d0d"
-        }}
-      >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 1440 320'
-          className='curve-one'
-        >
-          <path
-            fill='#0d0d0d'
-            fillOpacity='1'
-            d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
-          ></path>
-        </svg>
-      </div>
+      <Skills skill={skill} />
+
       {/* <form onSubmit={e => handleSubmit(e, testVariable)} className='curve-one'>
         <input onChange={e => setTestVariable(e.target.value)} />
         <button>Submit</button>
       </form>
       <RenderTestVariable testVar={testReducerItem} /> */}
       {/* <RenderTestVariable testVar={skill} /> */}
-      <Work />
       <div
-        className='curve-wrapper-bottom'
         style={{
-          position: "relative",
-          transform: "rotate(180deg)",
-          marginTop: "-1vh"
+          display: "inline-block !important"
         }}
       >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 1440 320'
-          style={{ zIndex: "-1 !important", float: "right !important" }}
-        >
-          <path
-            fill='#0d0d0d'
-            fillOpacity='1'
-            d='M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,181.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
-          ></path>
-        </svg>
+        {" "}
+        <Contact />
       </div>
+      <Work />
+
       <div>
         <Footer />
       </div>

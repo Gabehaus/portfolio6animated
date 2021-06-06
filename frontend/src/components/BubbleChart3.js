@@ -22,14 +22,15 @@ class BubbleChart1c extends React.Component {
     this.state = {
       data: [],
       mytext: [
-        "Express",
+        "Jest",
+        "TypeORM",
+
         "Mongoose",
         "MongoDB",
         "PostgreSQL",
-        "TypeORM",
-        "GraphQL",
-        "Jest"
-      ]
+        "Express",
+        "GraphQL"
+      ] ///20, 20, 70, 50, 50, 90, 50
     }
 
     this.radiusScale = this.radiusScale.bind(this)

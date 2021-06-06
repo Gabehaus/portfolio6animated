@@ -22,10 +22,10 @@ class BubbleChart1c extends React.Component {
     this.state = {
       data: [],
       mytext: [
-        "Bootstrap",
-        "Chakra",
-        "MaterialUI",
         "D3",
+        "Bootstrap",
+        "MaterialUI",
+        "Chakra",
         "Chart.js",
         "GSAP",
         "React3Fiber"
@@ -119,8 +119,6 @@ class BubbleChart1c extends React.Component {
       .interpolate(d3.interpolateHcl)
       .range(["#4f7bff", "#c457f7"])
 
-    // render simple circle element
-    //radiusScale controls size of circles
     if (!this.props.useLabels) {
       const circles = _.map(data, (item, index) => {
         return (

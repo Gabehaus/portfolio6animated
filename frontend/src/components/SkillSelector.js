@@ -15,13 +15,19 @@ const SkillSelector = ({ skillSet, screen, skill }) => {
   //.range = number of circles
   //_.random = circle size variance
 
+  const rawdata1 = _.map([20, 20, 70, 50, 50, 90, 50], thing => {
+    return {
+      v: thing //_.random(80, 100)  [90, 90, 90, 70, 70, 70, 50, 50, 30, 30]  _.range(10)
+    }
+  })
+
   const rawdata2 = _.map([90, 70, 50, 50, 50, 20, 20], thing => {
     return {
       v: thing //_.random(80, 100)  [90, 90, 90, 70, 70, 70, 50, 50, 30, 30]  _.range(10)
     }
   })
 
-  const rawdata3 = _.map([90, 70, 50, 40, 40, 40, 20], thing => {
+  const rawdata3 = _.map([40, 90, 70, 50, 40, 40, 20], thing => {
     return {
       v: thing //_.random(80, 100)  [90, 90, 90, 70, 70, 70, 50, 50, 30, 30]  _.range(10)
     }
@@ -41,7 +47,7 @@ const SkillSelector = ({ skillSet, screen, skill }) => {
         ) : skill === "UI / Design" ? (
           <BubbleChart2 useLabels data={rawdata3} />
         ) : (
-          <BubbleChart3 useLabels data={rawdata2} />
+          <BubbleChart3 useLabels data={rawdata1} />
         )
       ) : null}
       {screen === "Ipad" ? (

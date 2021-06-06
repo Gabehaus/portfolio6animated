@@ -63,7 +63,12 @@ const Work = () => {
         minHeight: "90vh",
         border: "none 2px pink",
         maxWidth: "100vw",
-        marginTop: window.innerWidth < 950 ? "-5px" : null
+        marginTop:
+          window.innerWidth < 950
+            ? "10vw"
+            : window.innerWidth < 600
+            ? "45vw"
+            : "10vw"
       }}
       id='work'
     >
