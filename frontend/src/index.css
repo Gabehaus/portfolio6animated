@@ -748,7 +748,7 @@ curved-div - 9 */
   .selfie-wrapper-mobile {
     width: 100vw;
     border: none 2px pink;
-    margin-left: 50%;
+    margin-left: 48%;
     transform: translateX(-50%);
     margin-top: -12vw;
   }
