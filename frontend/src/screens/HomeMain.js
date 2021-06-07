@@ -114,7 +114,7 @@ const HomeMain = () => {
           webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
           duration: 0.8
         },
-        "-=.9"
+        "-=1.3"
       )
   })
 
