@@ -1,17 +1,26 @@
-.alert-enter {
-  opacity: 0;
-  transform: scale(0.3);
+.hi-text,
+.i-build-text {
+  clip-path: inset(100% 0% 0%);
 }
-.alert-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 6000ms, transform 6000ms;
+
+.logo {
+  clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
 }
-.alert-exit {
-  opacity: 1;
+
+.lin {
+  clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
 }
-.alert-exit-active {
-  opacity: 0;
-  transform: scale(0.3);
-  transition: opacity 3000ms, transform 3000ms;
+
+.small-text-animation-wrapper {
+  clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+  /* opacity: 0; */
+}
+
+.contact-button {
+  clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+}
+
+.selfie-wrapper,
+.selfie-wrapper-mobile {
+  clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
 }

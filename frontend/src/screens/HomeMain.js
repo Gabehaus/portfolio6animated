@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react"
 
 import { useDispatch, useSelector } from "react-redux"
 import { Row, Col } from "react-bootstrap"
+import { gsap } from "gsap"
+import { TextPlugin } from "gsap/TextPlugin.js"
+import { RoughEase } from "gsap/dist/EasePack"
 import Work from "../components/Work"
 import Contact from "../components/Contact"
 import ThreeD1 from "../components/ThreeD1"
@@ -41,6 +44,79 @@ const HomeMain = () => {
       }
     }) // initialize animate on scroll
   }, [])
+
+  useEffect(() => {
+    const tl = gsap.timeline()
+
+    tl.to(".hi-text", {
+      clipPath: "inset(0% 0% 0%)",
+      webkitClipPath: "inset(0% 0% 0%)",
+      delay: 1,
+      duration: 1
+    })
+      .to(
+        ".i-build-text",
+        {
+          clipPath: "inset(0% 0% 0%)",
+          webkitClipPath: "inset(0% 0% 0%)",
+
+          duration: 1
+        },
+        "+=1"
+      )
+
+      .to(
+        ".small-text-animation-wrapper",
+        {
+          clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+          webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+
+          duration: 1
+        },
+        "+=1"
+      )
+      .to(
+        ".lin",
+        {
+          clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+          webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+
+          duration: 1
+        },
+        "-=.9"
+      )
+      .to(
+        ".logo",
+        {
+          clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+          webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+
+          duration: 1
+        },
+        "-=1.3"
+      )
+      .to(
+        ".contact-button",
+        {
+          clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+          webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+
+          duration: 0.3
+        },
+        "-=.9"
+      )
+      .to(
+        ".selfie-wrapper, .selfie-wrapper-mobile",
+        {
+          // clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+          // webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)", small-text-animation-wrapper .contact-button
+          clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+          webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+          duration: 0.8
+        },
+        "-=.9"
+      )
+  })
 
   //set screen variable
   useEffect(() => {
@@ -119,21 +195,21 @@ const HomeMain = () => {
                   <ThreeDmobile />
                 </div>
               ) : null}
-              <p className='hi-text'>
-                Hi,
-                {screen === "Ipad" ? null : null} I'm Gabe
-              </p>
+              <p className='hi-text'>Hi, I'm Gabe</p>
             </Col>
           </Row>
           <Row className='bg-light'>
             <Col className={screen === "Mobile" ? "text" : "i-build-websites"}>
-              I build websites
+              <p className='i-build-text'>I build websites</p>
             </Col>
           </Row>
           <Row className='bg-light'>
             <Col className='small-text px-3'>
-              Node.js - React{screen === "Ipad" ? <br /> : null}
-              {screen !== "Ipad" ? " -" : null} Javascript - Typescript
+              <p className='small-text-animation-wrapper'>
+                {" "}
+                Node.js - React{screen === "Ipad" ? <br /> : null}
+                {screen !== "Ipad" ? " -" : null} Javascript - Typescript{" "}
+              </p>
               <a href='#contact'>
                 {" "}
                 <button

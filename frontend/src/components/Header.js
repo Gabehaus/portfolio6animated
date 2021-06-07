@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <Navbar style={{ background: "#0d0d0d" }} expand='lg'>
-        <Navbar.Brand href='#home'>
+        <Navbar.Brand href='#home' className='logo'>
           {" "}
           <img
             alt=''
