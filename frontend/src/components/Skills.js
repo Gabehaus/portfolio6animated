@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Row, Col } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import resume from "../pdf/resume.pdf"
-
+import useVisible from "./useVisible"
 import SkillSelector from "./SkillSelector"
+
 import Aos from "aos"
 import "aos/dist/aos.css"
 
 const Skills = ({ skill }) => {
   const chart = "languages"
   const [screen, setScreen] = useState("")
+  const elemRef = useRef()
+  const isVisible = useVisible(elemRef)
 
   useEffect(() => {
     Aos.init({
-      duration: 2000,
-      disable: function() {
-        var maxWidth = 800
-        return window.innerWidth < maxWidth
-      }
+      duration: 2000
     }) // initialize animate on scroll
   }, [])
 
@@ -56,11 +55,15 @@ const Skills = ({ skill }) => {
             style={{
               border: "none 2px yellow"
             }}
+            data-aos='fade-right'
+            ref={elemRef}
           >
-            <SkillSelector skillSet={chart} screen={screen} skill={skill} />
+            {isVisible && (
+              <SkillSelector skillSet={chart} screen={screen} skill={skill} />
+            )}
           </Col>
         ) : null}
-        <Col lg={5} md={12} className='what-im-into'>
+        <Col lg={5} md={12} className='what-im-into' data-aos='fade-left'>
           <Col
             md={12}
             className='work-title2 mt-5'
@@ -83,7 +86,6 @@ const Skills = ({ skill }) => {
           </Col>
           {screen === "Mobile" ? (
             <Col className='white-i-use-plus-skills'>
-              å
               <React.Fragment>
                 <Col
                   md={12}
@@ -101,12 +103,15 @@ const Skills = ({ skill }) => {
                     border: "none 2px yellow"
                   }}
                   className='mb-5'
+                  ref={elemRef}
                 >
-                  <SkillSelector
-                    skillSet={chart}
-                    screen={screen}
-                    skill={skill}
-                  />
+                  {isVisible && (
+                    <SkillSelector
+                      skillSet={chart}
+                      screen={screen}
+                      skill={skill}
+                    />
+                  )}
                 </Col>
               </React.Fragment>
             </Col>

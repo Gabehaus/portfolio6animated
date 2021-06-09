@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Canvas, useFrame } from "react-three-fiber"
+import { Canvas, useFrame } from "@react-three/fiber"
 import shallow from "zustand/shallow"
 
 import { BoxMobile, useStore } from "./BoxMobile"
@@ -33,8 +33,9 @@ export default function ThreeD1() {
   return (
     <Canvas
       style={{
-        width: "100%",
-        height: "30vh"
+        width: "100% ",
+        height: "30vh",
+        background: "transparent"
       }}
     >
       {boxes.map(id => (

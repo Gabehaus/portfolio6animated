@@ -20,7 +20,28 @@ class BubbleChart1b extends React.Component {
 
     this.state = {
       data: [],
-      mytext: ["Typescript", "Javascript", "Node", "React", "Redux", "NextJS"]
+      mytext: [
+        "Redux",
+        "Typescript",
+        "Node",
+        "React",
+        "Javascript",
+        "D3",
+        "Bootstrap",
+        "MaterialUI",
+        "Chakra",
+        "Chart.js",
+        "GSAP",
+        "React3Fiber",
+
+        "TypeORM",
+
+        "Mongoose",
+        "MongoDB",
+        "PostgreSQL",
+        "Express",
+        "GraphQL"
+      ]
     }
 
     this.radiusScale = this.radiusScale.bind(this)
@@ -57,7 +78,7 @@ class BubbleChart1b extends React.Component {
   radiusScale = value => {
     const fx = d3
       .scaleSqrt()
-      .range(window.innerWidth < 500 ? [1, 50] : [1, 80]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
+      .range([1, 50]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
       .domain([this.minValue, this.maxValue])
     // console.log("value: ", value)
     return fx(value)

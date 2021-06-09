@@ -21,13 +21,26 @@ class BubbleChart1c extends React.Component {
     this.state = {
       data: [],
       mytext: [
-        "Javascript",
+        "Redux",
         "Typescript",
         "Node",
         "React",
-        "Redux",
-        "NextJS",
-        "Vue"
+        "Javascript",
+        "D3",
+        "Bootstrap",
+        "MaterialUI",
+        "Chakra",
+        "Chart.js",
+        "GSAP",
+        "React3Fiber",
+
+        "TypeORM",
+
+        "Mongoose",
+        "MongoDB",
+        "PostgreSQL",
+        "Express",
+        "GraphQL"
       ]
     }
 
@@ -65,7 +78,7 @@ class BubbleChart1c extends React.Component {
   radiusScale = value => {
     const fx = d3
       .scaleSqrt()
-      .range([1, 70]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
+      .range([1, 40]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
       .domain([this.minValue, this.maxValue])
     // console.log("value: ", value)
     return fx(value)
@@ -144,7 +157,7 @@ class BubbleChart1c extends React.Component {
       return (
         <g
           key={index}
-          transform={`translate(${props.width / 3.5 + item.x}, ${props.height /
+          transform={`translate(${props.width / 3.3 + item.x}, ${props.height /
             2 +
             item.y})`} //divisors originally were of value 2, this is how to move circles inside square 3, 1.7, 1.3
         >

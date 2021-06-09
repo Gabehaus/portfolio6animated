@@ -19,6 +19,9 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <title>Empty React App</title>
+    <script>
+      if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer
+    </script>
   </head>
 
   <body>

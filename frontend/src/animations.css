@@ -23,4 +23,23 @@
 .selfie-wrapper,
 .selfie-wrapper-mobile {
   clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+  /* transform: scale(1.2); */
+}
+
+.fade-in-image-enter {
+  opacity: 0;
+}
+
+.fade-in-image-enter-active {
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-in-image-exit {
+  opacity: 1;
+}
+
+.fade-in-image-exit-active {
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
 }

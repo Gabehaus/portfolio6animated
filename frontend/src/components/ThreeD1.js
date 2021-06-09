@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
-import { Canvas, useFrame } from "react-three-fiber"
+import { Canvas, useFrame } from "@react-three/fiber"
 import shallow from "zustand/shallow"
+import Aos from "aos"
 import { Box, useStore } from "./Box"
 // import { BoxIpad } from "./BoxIpad"
 
@@ -23,6 +24,12 @@ export default function ThreeD1() {
   )
 
   useEffect(() => {
+    Aos.init({
+      duration: 2000
+    }) // initialize animate on scroll
+  }, [])
+
+  useEffect(() => {
     function animate() {
       mutate()
       requestAnimationFrame(animate)
@@ -34,7 +41,8 @@ export default function ThreeD1() {
     <Canvas
       style={{
         width: "100%",
-        height: "52vh"
+        height: "52vh",
+        background: "transparent"
       }}
     >
       {boxes.map(id => (

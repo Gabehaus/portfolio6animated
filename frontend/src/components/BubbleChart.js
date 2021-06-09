@@ -22,14 +22,26 @@ class BubbleChart1c extends React.Component {
     this.state = {
       data: [],
       mytext: [
-        "NextJS",
-        "Javascript",
         "Redux",
         "Typescript",
         "Node",
         "React",
+        "Javascript",
+        "D3",
+        "Bootstrap",
+        "MaterialUI",
+        "Chakra",
+        "Chart.js",
+        "GSAP",
+        "React3Fiber",
 
-        "Vue"
+        "TypeORM",
+
+        "Mongoose",
+        "MongoDB",
+        "PostgreSQL",
+        "Express",
+        "GraphQL"
       ]
     }
 
@@ -75,7 +87,7 @@ class BubbleChart1c extends React.Component {
   radiusScale = value => {
     const fx = d3
       .scaleSqrt()
-      .range([1, 90]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
+      .range([1, 50]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
       .domain([this.minValue, this.maxValue])
     // console.log("value: ", value)
     return fx(value)
@@ -184,9 +196,10 @@ class BubbleChart1c extends React.Component {
       return (
         <svg
           width={"10vw"} // "#0d0d0d"
-          height={"25vw"}
+          height={"20vw"}
           style={{
-            marginTop: "0vh",
+            marginLeft: "0vw",
+            zIndex: "100",
 
             background: "transparent",
             border: "solid 1x white",

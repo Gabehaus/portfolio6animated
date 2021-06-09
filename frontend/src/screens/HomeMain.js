@@ -37,15 +37,12 @@ const HomeMain = () => {
 
   useEffect(() => {
     Aos.init({
-      duration: 2000,
-      disable: function() {
-        var maxWidth = 800
-        return window.innerWidth < maxWidth
-      }
+      duration: 2000
     }) // initialize animate on scroll
   }, [])
 
   useEffect(() => {
+    console.log("screen", screen)
     const tl = gsap.timeline()
 
     tl.to(".hi-text", {
@@ -62,7 +59,7 @@ const HomeMain = () => {
 
           duration: 1
         },
-        "+=1"
+        "+=.6"
       )
 
       .to(
@@ -106,15 +103,22 @@ const HomeMain = () => {
         "-=.9"
       )
       .to(
-        ".selfie-wrapper, .selfie-wrapper-mobile",
+        " .selfie-wrapper-mobile",
         {
-          // clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
-          // webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)", small-text-animation-wrapper .contact-button
           clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
-          webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
-          duration: 0.8
+          webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)"
+          // duration: 0.8
         },
         "-=1.3"
+      )
+      .to(
+        ".selfie-wrapper",
+        {
+          clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+          webkitClipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)"
+          // duration: 0.8
+        },
+        "-=1"
       )
   })
 
@@ -144,21 +148,7 @@ const HomeMain = () => {
 
   useEffect(() => {
     var a = ["Front-End", "UI / Design", "Back-End"]
-
-    function log(i) {
-      dispatch(changeSkillSet(a[i]))
-
-      if (i < a.length) {
-        setTimeout(function() {
-          i++
-          log(i)
-        }, 3000)
-      } else {
-        log(0)
-      }
-    }
-
-    log(0)
+    dispatch(changeSkillSet(a[0]))
   }, [dispatch])
 
   // const handleSubmit = (e, string) => {
@@ -188,8 +178,7 @@ const HomeMain = () => {
 
           <Row className='bg-light'>
             <Col className='text'>
-              {//  style={{ maxWidth: "100%", marginTop: "8vh" }}
-              screen === "Mobile" ? (
+              {screen === "Mobile" ? (
                 <div alt='' src={selfie} className='selfie-wrapper-mobile'>
                   {" "}
                   <ThreeDmobile />
@@ -252,16 +241,11 @@ const HomeMain = () => {
 
       <Skills skill={skill} />
 
-      {/* <form onSubmit={e => handleSubmit(e, testVariable)} className='curve-one'>
-        <input onChange={e => setTestVariable(e.target.value)} />
-        <button>Submit</button>
-      </form>
-      <RenderTestVariable testVar={testReducerItem} /> */}
-      {/* <RenderTestVariable testVar={skill} /> */}
       <div
         style={{
           display: "inline-block !important"
         }}
+        data-aos='fade-in'
       >
         {" "}
         <Contact />

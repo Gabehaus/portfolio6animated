@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Canvas, useFrame } from "react-three-fiber"
+import { Canvas, useFrame } from "@react-three/fiber"
 import shallow from "zustand/shallow"
 
 import { BoxIpad, useStore } from "./BoxIpad"
@@ -11,6 +11,7 @@ function Dolly() {
   useFrame(({ clock, camera }) => {
     camera.position.z = 3
     camera.position.y = 0
+    camera.position.x = 0.2
   })
 
   return null
@@ -35,7 +36,7 @@ export default function ThreeD1() {
       style={{
         width: "100%",
         height: "50vh",
-
+        background: "transparent",
         marginLeft: "9vw"
       }}
     >

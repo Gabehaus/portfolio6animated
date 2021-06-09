@@ -122,7 +122,7 @@ curved-div - 9 */
     margin-top: 2vw !important;
     color: white !important;
     margin-bottom: 2vw;
-    background: #0d0d0d !important;
+    background: transparent !important;
   }
 
   .work-title3 {
@@ -248,7 +248,7 @@ curved-div - 9 */
 
   .what-im-into {
     margin-top: -3vw !important;
-    background: #0d0d0d;
+    background: transparent;
     border: none 1px yellow;
     margin-left: -5vw !important;
   }
