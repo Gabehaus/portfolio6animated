@@ -103,15 +103,12 @@ const Skills = ({ skill }) => {
                     border: "none 2px yellow"
                   }}
                   className='mb-5'
-                  ref={elemRef}
                 >
-                  {isVisible && (
-                    <SkillSelector
-                      skillSet={chart}
-                      screen={screen}
-                      skill={skill}
-                    />
-                  )}
+                  <SkillSelector
+                    skillSet={chart}
+                    screen={screen}
+                    skill={skill}
+                  />
                 </Col>
               </React.Fragment>
             </Col>
