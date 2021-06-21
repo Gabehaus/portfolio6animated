@@ -69,7 +69,7 @@ const Skills = ({ skill }) => {
             className='work-title2 mt-5'
             style={{ background: "transparent" }}
           >
-            White I'm into
+            What I'm into
           </Col>{" "}
           <Col
             md={12}
