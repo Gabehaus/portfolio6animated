@@ -6,7 +6,7 @@ import logo3 from "../images/logo3.png"
 const Header = () => {
   return (
     <header>
-      <Navbar style={{ background: "#0d0d0d" }} expand='lg'>
+      <Navbar style={{ background: "#0d0d0d" }} expand='lg' variant='dark'>
         <Navbar.Brand href='#home' className='logo'>
           {" "}
           <img
@@ -24,7 +24,7 @@ const Header = () => {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
-        <Navbar.Collapse id='basic-navbar-nav'>
+        <Navbar.Collapse id='basic-navbar-nav' className='collapse'>
           <Nav className='mr-auto'>
             <div className='navLink-wrapper'>
               <Nav.Link

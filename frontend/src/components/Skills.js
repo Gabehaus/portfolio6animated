@@ -23,12 +23,12 @@ const Skills = ({ skill }) => {
   //set screen variable
   useEffect(() => {
     const screenSet = () => {
-      if (window.innerWidth > 800) {
+      if (window.innerWidth > 1000) {
         setScreen("Desktop")
         return
       }
 
-      if (window.innerWidth < 800 && window.innerWidth > 580) {
+      if (window.innerWidth < 1000 && window.innerWidth > 580) {
         setScreen("Ipad")
         return
       }
@@ -69,7 +69,7 @@ const Skills = ({ skill }) => {
             className='work-title2 mt-5'
             style={{ background: "transparent" }}
           >
-            What I'm into
+            White I'm into
           </Col>{" "}
           <Col
             md={12}

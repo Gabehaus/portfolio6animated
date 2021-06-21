@@ -10,7 +10,7 @@ import Contact from "../components/Contact"
 import ThreeD1 from "../components/ThreeD1"
 import ThreeDIpad from "../components/ThreeDIpad"
 import ThreeDmobile from "../components/ThreeDmobile"
-// import BubbleChart from "../components/BubbleChart"
+
 import Skills from "../components/Skills"
 import Footer from "../components/Footer"
 import Aos from "aos"
@@ -19,7 +19,6 @@ import "aos/dist/aos.css"
 import changeSkillSet from "../actions/skillSetActions"
 
 import selfie from "../images/selfie.png"
-// var _ = require("lodash")
 
 const HomeMain = () => {
   const dispatch = useDispatch()
@@ -42,7 +41,6 @@ const HomeMain = () => {
   }, [])
 
   useEffect(() => {
-    console.log("screen", screen)
     const tl = gsap.timeline()
 
     tl.to(".hi-text", {
@@ -80,7 +78,7 @@ const HomeMain = () => {
 
           duration: 1
         },
-        "-=.9"
+        "-=1.3"
       )
       .to(
         ".logo",

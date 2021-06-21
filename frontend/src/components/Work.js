@@ -16,15 +16,6 @@ import quotesBPNG from "../images/apps/quotesBPNG.png"
 import CalTekPNG from "../images/apps/CalTekPNG.png"
 
 const Work = () => {
-  const slideImages = [
-    fathackPNG,
-    CalTekPNG,
-    markownPNG,
-    drumPNG,
-    clockBPNG,
-    calculatorPNG,
-    quotesBPNG
-  ]
   const [slideImagesPreloaded, setSlideImagesPreloaded] = useState([])
 
   useEffect(() => {
@@ -39,6 +30,15 @@ const Work = () => {
 
   //load images
   useEffect(() => {
+    const slideImages = [
+      fathackPNG,
+      CalTekPNG,
+      markownPNG,
+      drumPNG,
+      clockBPNG,
+      calculatorPNG,
+      quotesBPNG
+    ]
     slideImages.map(elem => {
       let newImage = (new Image().src = elem)
       //   slideImagesPreloaded.push((new Image().src = elem))
@@ -119,7 +119,7 @@ const Work = () => {
       <Row>
         <h3
           className='project-desc1 text-center font-italic mt-3'
-          style={{ color: "white" }}
+          style={{ color: "#7c73ff " }}
         >
           Assistance on client projects
         </h3>

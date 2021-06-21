@@ -189,17 +189,29 @@ class BubbleChart1b extends React.Component {
   render() {
     if (this.state.data.length) {
       return (
-        <svg
-          width={"100vw"} //window.innerWidth < 800 ? "100vw" : "50vw"   "#0d0d0d"
-          height={"50vh"}
+        <div
           style={{
-            marginTop: "0vh",
+            minHeight: window.innerHeight < 1000 ? "90vh" : "0vw",
+            minWidth: "50vw",
+            position: "relative !important",
 
-            background: "transparent"
+            marginBottom: "20vw !important"
           }}
         >
-          {this.renderBubbles(this.state.data)}
-        </svg>
+          {" "}
+          <svg
+            width={"100vw"} //window.innerWidth < 800 ? "100vw" : "50vw"   "#0d0d0d"
+            height={"50vh"}
+            style={{
+              marginTop: "0vh",
+              overflow: "visible",
+              background: "transparent",
+              border: "none 2px yellow"
+            }}
+          >
+            {this.renderBubbles(this.state.data)}
+          </svg>
+        </div>
       )
     }
 

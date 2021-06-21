@@ -942,6 +942,10 @@ curved-div - 9 */
     margin-bottom: 40vw !important;
   }
 
+  .collapse {
+    border: solid 2px red !important;
+  }
+
   body {
     margin-left: 0vw !important;
   }
