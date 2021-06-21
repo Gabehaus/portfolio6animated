@@ -111,7 +111,7 @@ const Work = () => {
         </Col>
         <Col lg={6} md={6} sm={5}></Col>
       </Row>
-      <Row>
+      <Row className='assistance'>
         <Col className='work-title mt-5' style={{ color: "white" }}>
           Assistance
         </Col>

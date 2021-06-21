@@ -510,6 +510,10 @@ curved-div - 9 */
     margin-top: 1vw !important;
     margin-left: -6vw !important;
   }
+
+  .assistance {
+    margin-top: 8vw !important;
+  }
 }
 
 @media (max-width: 1500px) {
