@@ -701,14 +701,15 @@ curved-div - 9 */
 
   .paragraph {
     margin-left: 0vw;
-    padding-left: 8vw !important;
+    padding-left: 14vw !important;
+
     padding-right: 6vw !important;
     font-size: 3vw;
     text-align: center !important;
   }
 
   .work-title2 {
-    margin-left: 3vw !important;
+    margin-left: 6vw !important;
   }
 
   .input-email {
@@ -729,6 +730,26 @@ curved-div - 9 */
 
   body {
     margin-left: -2.3vw !important;
+  }
+
+  .contact-title {
+    padding-left: 6vw !important;
+  }
+
+  .form {
+    padding-left: 5vw !important;
+  }
+
+  .resume-link {
+    padding-left: 5vw !important;
+  }
+
+  #work {
+    padding-left: 9vw !important;
+  }
+
+  .grid-container {
+    padding-left: 20vw !important;
   }
 }
 
@@ -948,6 +969,26 @@ curved-div - 9 */
 
   .collapse {
     border: solid 2px red !important;
+  }
+
+  .contact-title {
+    padding-left: 0vw !important;
+  }
+
+  .form {
+    padding-left: 0vw !important;
+  }
+
+  .resume-link {
+    padding-left: 0vw !important;
+  }
+
+  #work {
+    padding-left: 0vw !important;
+  }
+
+  .grid-container {
+    padding-left: 0vw !important;
   }
 
   body {

@@ -142,6 +142,10 @@ const HomeMain = () => {
     window.addEventListener("resize", screenSet)
 
     screenSet()
+
+    return _ => {
+      window.removeEventListener("resize", screenSet)
+    }
   }, [])
 
   useEffect(() => {

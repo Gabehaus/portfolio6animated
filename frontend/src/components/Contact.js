@@ -65,6 +65,7 @@ export default function Contact() {
       <Form
         onSubmit={handleSubmit}
         style={{ color: "white", marginBottom: "2vw" }}
+        className='form'
       >
         {sent ? <Alert color='success'>Email successfully sent!</Alert> : null}
         {sent === false ? <Alert color='danger'>Email not sent!</Alert> : null}
