@@ -76,6 +76,14 @@ curved-div - 9 */
     /* #da97f7   */
   }
 
+  .outer-div {
+    height: 5vh;
+    position: relative !important;
+    min-height: 0 !important;
+    display: inline-block !important;
+    z-index: 100 !important;
+  }
+
   .contact-button {
     display: block;
     height: 5vh;

@@ -150,15 +150,15 @@ const HomeMain = () => {
         "-=.6"
       )
 
-    const words = ["websites", "apps", "worlds"]
+    // const words = ["websites", "apps", "worlds"]
 
-    const tl2 = gsap.timeline({ delay: 3, repeat: -1 })
+    // const tl2 = gsap.timeline({ delay: 3, repeat: -1 })
 
-    words.map(word => {
-      let tl3 = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 })
-      tl3.to(".typed2", { duration: 0.3, text: word, delay: 1 })
-      tl2.add(tl3)
-    })
+    // words.map(word => {
+    //   let tl3 = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 })
+    //   tl3.to(".typed2", { duration: 0.3, text: word, delay: 1 })
+    //   tl2.add(tl3)
+    // })
   })
 
   //set screen variable
@@ -233,7 +233,7 @@ const HomeMain = () => {
           <Row className='bg-light'>
             <Col className={screen === "Mobile" ? "text" : "i-build-websites"}>
               <p className='i-build-text'>
-                I build <span className='typed2'></span>
+                I build <span className='typed2'>websites</span>
               </p>
             </Col>
           </Row>
@@ -244,16 +244,19 @@ const HomeMain = () => {
                 Node.js - React{screen === "Ipad" ? <br /> : null}
                 {screen !== "Ipad" ? " -" : null} Javascript - Typescript{" "}
               </p>
-              <a
-                href='#contact'
+
+              <input
+                type='button'
+                onClick={e => {
+                  e.preventDefault()
+                  window.location.href = "#contact"
+                }}
+                value='Contact Me!'
+                className='contact-button'
+                ref={buttonOneRef}
                 onMouseEnter={onMouseEnterHandler}
                 onMouseLeave={onMouseLeaveHandler}
-              >
-                {" "}
-                <button className='contact-button' ref={buttonOneRef}>
-                  <span className='contact-me'></span>
-                </button>
-              </a>
+              />
             </Col>
           </Row>
         </Col>
