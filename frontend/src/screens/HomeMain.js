@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 
 import { useDispatch, useSelector } from "react-redux"
 import { Row, Col } from "react-bootstrap"
 import { gsap } from "gsap"
 import { TextPlugin } from "gsap/TextPlugin.js"
 import { RoughEase } from "gsap/dist/EasePack"
+
 import Work from "../components/Work"
 import Contact from "../components/Contact"
 import ThreeD1 from "../components/ThreeD1"
@@ -19,12 +20,15 @@ import "aos/dist/aos.css"
 import changeSkillSet from "../actions/skillSetActions"
 
 import selfie from "../images/selfie.png"
+gsap.registerPlugin(TextPlugin, RoughEase)
 
 const HomeMain = () => {
   const dispatch = useDispatch()
   const [screen, setScreen] = useState("")
   const skillReducer = useSelector(state => state.skill)
   const { skill } = skillReducer
+  const buttonOneRef = useRef(null)
+  const buttonOneTween = useRef(null)
 
   // //.range = number of circles
   // //_.random = circle size variance
@@ -33,6 +37,25 @@ const HomeMain = () => {
   //     v: thing //_.random(80, 100)  [90, 90, 90, 70, 70, 70, 50, 50, 30, 30]  _.range(10)
   //   }
   // })
+
+  useEffect(() => {
+    buttonOneTween.current = gsap.to(buttonOneRef.current, {
+      scale: "1",
+
+      color: "#3108ff",
+      border: "solid 5px #3108ff",
+
+      duration: 0.1,
+      paused: true
+    })
+  }, [])
+
+  const onMouseEnterHandler = () => {
+    buttonOneTween.current.play()
+  }
+  const onMouseLeaveHandler = () => {
+    buttonOneTween.current.reverse()
+  }
 
   useEffect(() => {
     Aos.init({
@@ -118,6 +141,24 @@ const HomeMain = () => {
         },
         "-=1"
       )
+      .to(
+        ".contact-me",
+        {
+          text: "Contact Me!"
+          // duration: 0.8
+        },
+        "-=.6"
+      )
+
+    const words = ["websites", "apps", "worlds"]
+
+    const tl2 = gsap.timeline({ delay: 3, repeat: -1 })
+
+    words.map(word => {
+      let tl3 = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 })
+      tl3.to(".typed2", { duration: 0.3, text: word, delay: 1 })
+      tl2.add(tl3)
+    })
   })
 
   //set screen variable
@@ -191,7 +232,9 @@ const HomeMain = () => {
           </Row>
           <Row className='bg-light'>
             <Col className={screen === "Mobile" ? "text" : "i-build-websites"}>
-              <p className='i-build-text'>I build websites</p>
+              <p className='i-build-text'>
+                I build <span className='typed2'></span>
+              </p>
             </Col>
           </Row>
           <Row className='bg-light'>
@@ -201,13 +244,14 @@ const HomeMain = () => {
                 Node.js - React{screen === "Ipad" ? <br /> : null}
                 {screen !== "Ipad" ? " -" : null} Javascript - Typescript{" "}
               </p>
-              <a href='#contact'>
+              <a
+                href='#contact'
+                onMouseEnter={onMouseEnterHandler}
+                onMouseLeave={onMouseLeaveHandler}
+              >
                 {" "}
-                <button
-                  className='contact-button'
-                  style={{ background: "red !important" }}
-                >
-                  Contact Me!
+                <button className='contact-button' ref={buttonOneRef}>
+                  <span className='contact-me'></span>
                 </button>
               </a>
             </Col>
