@@ -23,7 +23,7 @@ class BubbleChart1c extends React.Component {
       data: [],
       mytext: [
         "Redux",
-        "Typescript",
+        "Typescrpt",
         "Node",
         "React",
         "Javascript",
@@ -98,12 +98,12 @@ class BubbleChart1c extends React.Component {
       .forceSimulation()
       .nodes(data)
       .velocityDecay(0.9)
-      .force("x", d3.forceX().strength(0.3))
+      .force("x", d3.forceX().strength(0.2))
       .force("y", d3.forceY().strength(0.05))
       .force(
         "collide",
         d3.forceCollide(d => {
-          return this.radiusScale(d.v) + 1
+          return this.radiusScale(d.v) + 7
         })
       )
       .on("tick", () => {
@@ -130,7 +130,7 @@ class BubbleChart1c extends React.Component {
       .scaleSqrt()
       .domain([minValue, maxValue])
       .interpolate(d3.interpolateRgb)
-      .range(["#0370ff", "#cd45ff", "#c821ff"])
+      .range(["#0370ff", "#cd45ff"])
 
     if (!this.props.useLabels) {
       const circles = _.map(data, (item, index) => {
@@ -173,6 +173,7 @@ class BubbleChart1c extends React.Component {
             fill={color(item.v)}
             stroke={d3.rgb(color("#d67af0")).brighter(2)}
             strokeWidth='2'
+            dropShadow='2px 8px 4px white'
           />
           <text
             dy='6'

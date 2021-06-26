@@ -119,7 +119,7 @@ const Work = () => {
       <Row>
         <h3
           className='project-desc1 text-center font-italic mt-3'
-          style={{ color: "#564aff", letterSpacing: ".4vw" }}
+          style={{ color: "#5c21ff", letterSpacing: ".4vw" }}
         >
           Assistance on client projects
         </h3>

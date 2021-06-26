@@ -28,17 +28,17 @@ class BubbleChart1b extends React.Component {
         "Javascript",
         "D3",
         "Bootstrap",
-        "MaterialUI",
+        "MDB",
         "Chakra",
         "Chart.js",
         "GSAP",
-        "React3Fiber",
+        "ThreeJS",
 
         "TypeORM",
 
         "Mongoose",
         "MongoDB",
-        "PostgreSQL",
+        "SQL",
         "Express",
         "GraphQL"
       ]
@@ -88,13 +88,13 @@ class BubbleChart1b extends React.Component {
     this.simulation = d3
       .forceSimulation()
       .nodes(data)
-      .velocityDecay(0.5)
-      .force("x", d3.forceX().strength(0.05))
-      .force("y", d3.forceY().strength(0.05))
+      .velocityDecay(0.9)
+      .force("x", d3.forceX().strength(0.22))
+      .force("y", d3.forceY().strength(0.35))
       .force(
-        "collide",
+        "collide ",
         d3.forceCollide(d => {
-          return this.radiusScale(d.v) + 2
+          return this.radiusScale(d.v) + 9
         })
       )
       .on("tick", () => {
