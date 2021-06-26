@@ -29,17 +29,17 @@ class BubbleChart1c extends React.Component {
         "Javascript",
         "D3",
         "Bootstrap",
-        "MaterialUI",
+        "MDB",
         "Chakra",
         "Chart.js",
         "GSAP",
-        "React3Fiber",
+        "ThreeJS",
 
         "TypeORM",
 
         "Mongoose",
         "MongoDB",
-        "PostgreSQL",
+        "SQL",
         "Express",
         "GraphQL"
       ]
@@ -87,7 +87,7 @@ class BubbleChart1c extends React.Component {
   radiusScale = value => {
     const fx = d3
       .scaleSqrt()
-      .range([1, 50]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
+      .range([1, 57]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
       .domain([this.minValue, this.maxValue])
     // console.log("value: ", value)
     return fx(value)
@@ -176,11 +176,13 @@ class BubbleChart1c extends React.Component {
           />
           <text
             dy='6'
+            letterSpacing='2px'
             fill='#0d0d0d'
-            fontFamily='Arial'
+            fontFamily='Gill Sans'
             textAnchor='middle'
-            fontSize={`${fontSize}px`}
+            fontSize={`${fontSize - 1}px`}
             fontWeight='bold'
+            shadow='2px 8px 4px green'
           >
             {this.state.mytext[index]}
           </text>

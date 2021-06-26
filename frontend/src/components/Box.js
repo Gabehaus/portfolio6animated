@@ -55,7 +55,10 @@ export function Box({ id, xMs, yMs }) {
   return (
     <mesh ref={mesh} style={{ opacity: 0.2 }}>
       <icosahedronBufferGeometry attach='geometry' args={[1.5, 0]} />
-      <meshNormalMaterial attach='material' position={[xMs, yMs]} />
+      <meshNormalMaterial attach='material' />
+      {/* <meshStandardMaterial attach='material' color={"white"} /> */}
+      <directionalLight color='#310fd9' intensity={3} position={[2, 2, 2]} />
+      {/* <directionalLight color='blue' intensity={0.8} position={[yMs, xMs, 1]} /> */}
     </mesh>
   )
 }

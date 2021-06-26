@@ -46,7 +46,7 @@ export default function ThreeD1({ x, y }) {
       }}
     >
       {boxes.map(id => (
-        <Box key={id} id={id} xMs={x} yMs={y} />
+        <Box key={id} id={id} xMs={x} yMs={y} color='red' />
       ))}
       <Dolly />
     </Canvas>

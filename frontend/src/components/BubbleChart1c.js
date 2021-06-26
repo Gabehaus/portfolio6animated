@@ -28,17 +28,17 @@ class BubbleChart1c extends React.Component {
         "Javascript",
         "D3",
         "Bootstrap",
-        "MaterialUI",
+        "MDB",
         "Chakra",
         "Chart.js",
         "GSAP",
-        "React3Fiber",
+        "ThreeJS",
 
         "TypeORM",
 
         "Mongoose",
         "MongoDB",
-        "PostgreSQL",
+        "SQL",
         "Express",
         "GraphQL"
       ]
