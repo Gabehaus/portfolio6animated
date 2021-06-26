@@ -97,13 +97,13 @@ class BubbleChart1c extends React.Component {
     this.simulation = d3
       .forceSimulation()
       .nodes(data)
-      .velocityDecay(0.5)
-      .force("x", d3.forceX().strength(0.05))
+      .velocityDecay(0.9)
+      .force("x", d3.forceX().strength(0.3))
       .force("y", d3.forceY().strength(0.05))
       .force(
         "collide",
         d3.forceCollide(d => {
-          return this.radiusScale(d.v) + 2
+          return this.radiusScale(d.v) + 1
         })
       )
       .on("tick", () => {
@@ -127,10 +127,10 @@ class BubbleChart1c extends React.Component {
       })
 
     const color = d3
-      .scaleLinear()
+      .scaleSqrt()
       .domain([minValue, maxValue])
-      .interpolate(d3.interpolateHcl)
-      .range(["#0d4aff", "#c821ff"])
+      .interpolate(d3.interpolateRgb)
+      .range(["#0370ff", "#cd45ff", "#c821ff"])
 
     if (!this.props.useLabels) {
       const circles = _.map(data, (item, index) => {
