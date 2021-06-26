@@ -87,7 +87,7 @@ curved-div - 9 */
   }
 
   .nested-bar {
-    background: blue;
+    background: #5c21ff;
     min-height: 3px;
     max-height: 3px !important;
     min-width: 7.3vw;
@@ -197,7 +197,7 @@ curved-div - 9 */
 
   .about-button {
     border: none;
-    background: #7c73ff;
+    background: #564aff;
     color: white;
     border-radius: 50px;
     height: 2.3vw;
@@ -207,7 +207,7 @@ curved-div - 9 */
   }
 
   .visit-button {
-    background: #7c73ff;
+    background: #564aff;
     border: none 2px #8847ff;
     color: white;
     border-radius: 50px;
@@ -282,12 +282,12 @@ curved-div - 9 */
   }
 
   .rounded-0 {
-    background: #7c73ff !important;
-    border: 1px solid #7c73ff !important;
+    background: #564aff !important;
+    border: 1px solid #564aff !important;
   }
 
   ::placeholder {
-    color: #616161;
+    color: #242424;
     font-size: 1.5em;
     margin-left: 5vw !important;
   }
