@@ -35,7 +35,7 @@ class BubbleChart1c extends React.Component {
         "GSAP",
         "ThreeJS",
 
-        "TypeORM",
+        "Typeorm",
 
         "Mongoose",
         "MongoDB",
@@ -98,7 +98,7 @@ class BubbleChart1c extends React.Component {
       .forceSimulation()
       .nodes(data)
       .velocityDecay(0.9)
-      .force("x", d3.forceX().strength(0.2))
+      .force("x", d3.forceX().strength(0.15))
       .force("y", d3.forceY().strength(0.05))
       .force(
         "collide",

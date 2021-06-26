@@ -33,7 +33,7 @@ export const useStore = create(set => ({
   }
 }))
 
-export function BoxMobile({ id }) {
+export function BoxMobile({ id, scrollY }) {
   const mesh = useRef()
   const coordinates = useRef([0, 0, 0])
   useEffect(() =>
@@ -45,6 +45,10 @@ export function BoxMobile({ id }) {
   useFrame(
     () => mesh.current && mesh.current.rotation.set(...coordinates.current)
   )
+
+  useFrame(() => {
+    mesh.current.rotation.y += scrollY / 300
+  })
   return (
     <mesh ref={mesh}>
       <icosahedronBufferGeometry attach='geometry' args={[1.6, 0]} />

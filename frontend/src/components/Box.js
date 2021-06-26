@@ -31,7 +31,7 @@ export const useStore = create(set => ({
   }
 }))
 
-export function Box({ id, xMs, yMs }) {
+export function Box({ id, xMs, yMs, scrollY }) {
   const mesh = useRef()
   const coordinates = useRef([0, 0, 1])
   useEffect(() =>
@@ -47,6 +47,10 @@ export function Box({ id, xMs, yMs }) {
 
   useFrame(() => {
     mesh.current.rotation.x += xMs / 500
+  })
+
+  useFrame(() => {
+    mesh.current.rotation.y += scrollY / 300
   })
 
   useFrame(() => {

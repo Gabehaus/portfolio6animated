@@ -10,6 +10,7 @@ import ThreeD1 from "../components/ThreeD1"
 import ThreeDIpad from "../components/ThreeDIpad"
 import ThreeDmobile from "../components/ThreeDmobile"
 import useMousePosition from "../components/useMousePosition"
+import useScrollPosition from "@react-hook/window-scroll"
 import Skills from "../components/Skills"
 import Footer from "../components/Footer"
 import Aos from "aos"
@@ -23,7 +24,7 @@ const HomeMain = () => {
   const dispatch = useDispatch()
   const [screen, setScreen] = useState("")
   const { x, y } = useMousePosition()
-
+  const scrollY = useScrollPosition(60 /*fps*/)
   const skillReducer = useSelector(state => state.skill)
   const { skill } = skillReducer
   const buttonOneRef = useRef(null)
@@ -248,7 +249,7 @@ const HomeMain = () => {
               {screen === "Mobile" ? (
                 <div alt='' src={selfie} className='selfie-wrapper-mobile'>
                   {" "}
-                  <ThreeDmobile />
+                  <ThreeDmobile scrollY={scrollY} />
                 </div>
               ) : null}
               <p className='hi-text'>Hi, I'm Gabe</p>
@@ -303,7 +304,11 @@ const HomeMain = () => {
                   style={{ background: "transparent" }}
                 >
                   {" "}
-                  {screen === "Ipad" ? <ThreeDIpad /> : <ThreeD1 x={x} y={y} />}
+                  {screen === "Ipad" ? (
+                    <ThreeDIpad scrollY={scrollY} />
+                  ) : (
+                    <ThreeD1 x={x} y={y} scrollY={scrollY} />
+                  )}
                 </div>
               ) : null}
             </Col>

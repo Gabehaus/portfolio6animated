@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { Navbar, Nav } from "react-bootstrap"
 
-const HeaderLink = ({ name }) => {
+const HeaderLink = ({ name, hrf }) => {
   const linkBar0Ref = useRef(null)
   const linkBarRef = useRef(null)
   const linkWordRef = useRef(null)
@@ -46,7 +46,7 @@ const HeaderLink = ({ name }) => {
 
   return (
     <Nav.Link
-      href='#contact'
+      href={hrf}
       className='lin'
       style={{ color: "#5c21ff" }}
       onMouseEnter={onMouseEnterHandler}

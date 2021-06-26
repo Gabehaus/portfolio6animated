@@ -34,7 +34,7 @@ class BubbleChart1c extends React.Component {
         "GSAP",
         "ThreeJS",
 
-        "TypeORM",
+        "Typeorm",
 
         "Mongoose",
         "MongoDB",
@@ -78,7 +78,7 @@ class BubbleChart1c extends React.Component {
   radiusScale = value => {
     const fx = d3
       .scaleSqrt()
-      .range([1, 42]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
+      .range([1, 44]) //second arg determines size of circles   window.innerWidth < 500 ? 50 : 70
       .domain([this.minValue, this.maxValue])
     // console.log("value: ", value)
     return fx(value)
@@ -157,7 +157,7 @@ class BubbleChart1c extends React.Component {
       return (
         <g
           key={index}
-          transform={`translate(${props.width / 3.3 + item.x}, ${props.height /
+          transform={`translate(${props.width / 3.1 + item.x}, ${props.height /
             2 +
             item.y})`} //divisors originally were of value 2, this is how to move circles inside square 3, 1.7, 1.3
         >

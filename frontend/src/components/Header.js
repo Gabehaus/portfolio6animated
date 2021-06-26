@@ -70,9 +70,9 @@ const Header = () => {
         <Navbar.Collapse id='basic-navbar-nav' className='collapse'>
           <Nav className='mr-auto'>
             <div className='navLink-wrapper'>
-              <HeaderLink name='Work' />
-              <HeaderLink name='Skills' />
-              <HeaderLink name='Resume' />
+              <HeaderLink name='Work' hrf='#work' />
+              <HeaderLink name='Skills' hrf='#skills' />
+              <HeaderLink name='Resume' hrf='#contact' />
             </div>
           </Nav>
         </Navbar.Collapse>

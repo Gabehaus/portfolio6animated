@@ -16,7 +16,7 @@ function Dolly() {
   return null
 }
 
-export default function ThreeD1() {
+export default function ThreeD1({ scrollY }) {
   const [boxes, mutate] = useStore(
     state => [state.boxes, state.mutate],
     shallow
@@ -39,7 +39,7 @@ export default function ThreeD1() {
       }}
     >
       {boxes.map(id => (
-        <BoxMobile key={id} id={id} />
+        <BoxMobile key={id} id={id} scrollY={scrollY} />
       ))}
       <Dolly />
     </Canvas>
