@@ -76,12 +76,24 @@ curved-div - 9 */
     /* #da97f7   */
   }
 
-  .outer-div {
-    height: 5vh;
-    position: relative !important;
-    min-height: 0 !important;
-    display: inline-block !important;
-    z-index: 100 !important;
+  .under-bar {
+    min-height: 3px;
+    max-width: 7.3vw;
+    width: 7.3vw;
+    background: #2181ff;
+    position: relative;
+    padding: 0;
+    opacity: 0;
+  }
+
+  .nested-bar {
+    background: blue;
+    min-height: 3px;
+    max-height: 3px !important;
+    min-width: 7.3vw;
+    max-width: 7.3vw;
+    margin: 0;
+    display: flex;
   }
 
   .contact-button {
@@ -759,6 +771,14 @@ curved-div - 9 */
 
   .grid-container {
     padding-left: 20vw !important;
+  }
+
+  .under-bar {
+    display: none;
+  }
+
+  .nested-bar {
+    display: none;
   }
 }
 

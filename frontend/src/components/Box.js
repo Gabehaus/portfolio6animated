@@ -1,18 +1,15 @@
 import React, { useRef, useEffect } from "react"
 import { useFrame } from "@react-three/fiber"
+import useMousePosition from "../components/useMousePosition"
 import create from "zustand"
 
-const BOX_COUNT = 120
+const BOX_COUNT = 6
 
 const boxIds = new Array(BOX_COUNT).fill().map((_, idx) => idx)
 const boxIdsCoordinates = boxIds.reduce(
   (acc, id) => ({
     ...acc,
-    [id]: [
-      Math.random() * Math.PI,
-      Math.random() * Math.PI,
-      Math.random() * Math.PI
-    ]
+    [id]: [Math.random(), Math.random(), Math.random()]
   }),
   0
 )
@@ -20,35 +17,45 @@ const boxIdsCoordinates = boxIds.reduce(
 export const useStore = create(set => ({
   boxes: boxIds,
   coordinates: boxIdsCoordinates,
+
   mutate: () => {
     set(state => {
       const coordinates = {}
       for (let i = 0; i < state.boxes.length; i++) {
         const id = state.boxes[i]
         const [x, y, z] = state.coordinates[id]
-        coordinates[id] = [x + 0.00075, y + 0.00075, z + 0.00075]
+        coordinates[id] = [x + 0.00195, y + 0.00195, z + 0.00295]
       }
       return { ...state, coordinates }
     })
   }
 }))
 
-export function Box({ id }) {
+export function Box({ id, xMs, yMs }) {
   const mesh = useRef()
-  const coordinates = useRef([0, 0, 0])
+  const coordinates = useRef([0, 0, 1])
   useEffect(() =>
     useStore.subscribe(
       xyz => (coordinates.current = xyz),
       state => state.coordinates[id]
     )
   )
+
   useFrame(
     () => mesh.current && mesh.current.rotation.set(...coordinates.current)
   )
+
+  useFrame(() => {
+    mesh.current.rotation.x += xMs / 500
+  })
+
+  useFrame(() => {
+    mesh.current.rotation.y += yMs / 500
+  })
   return (
-    <mesh ref={mesh}>
+    <mesh ref={mesh} style={{ opacity: 0.2 }}>
       <icosahedronBufferGeometry attach='geometry' args={[1.5, 0]} />
-      <meshNormalMaterial attach='material' />
+      <meshNormalMaterial attach='material' position={[xMs, yMs]} />
     </mesh>
   )
 }

@@ -3,15 +3,13 @@ import React, { useEffect, useState, useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Row, Col } from "react-bootstrap"
 import { gsap } from "gsap"
-import { TextPlugin } from "gsap/TextPlugin.js"
-import { RoughEase } from "gsap/dist/EasePack"
 
 import Work from "../components/Work"
 import Contact from "../components/Contact"
 import ThreeD1 from "../components/ThreeD1"
 import ThreeDIpad from "../components/ThreeDIpad"
 import ThreeDmobile from "../components/ThreeDmobile"
-
+import useMousePosition from "../components/useMousePosition"
 import Skills from "../components/Skills"
 import Footer from "../components/Footer"
 import Aos from "aos"
@@ -20,15 +18,17 @@ import "aos/dist/aos.css"
 import changeSkillSet from "../actions/skillSetActions"
 
 import selfie from "../images/selfie.png"
-gsap.registerPlugin(TextPlugin, RoughEase)
 
 const HomeMain = () => {
   const dispatch = useDispatch()
   const [screen, setScreen] = useState("")
+  const { x, y } = useMousePosition()
+
   const skillReducer = useSelector(state => state.skill)
   const { skill } = skillReducer
   const buttonOneRef = useRef(null)
   const buttonOneTween = useRef(null)
+  const buttonOneTween2 = useRef(null)
 
   // //.range = number of circles
   // //_.random = circle size variance
@@ -40,21 +40,31 @@ const HomeMain = () => {
 
   useEffect(() => {
     buttonOneTween.current = gsap.to(buttonOneRef.current, {
-      scale: "1",
-
-      color: "#3108ff",
+      scaleY: "1.05",
+      letterSpacing: "0",
+      ease: "power1.out",
+      // color: "#084aff",
       border: "solid 5px #3108ff",
 
-      duration: 0.1,
+      duration: 0.6,
+      paused: true
+    })
+
+    buttonOneTween2.current = gsap.to(buttonOneRef.current, {
+      color: "#2181ff",
+
+      duration: 1,
       paused: true
     })
   }, [])
 
   const onMouseEnterHandler = () => {
     buttonOneTween.current.play()
+    buttonOneTween2.current.play()
   }
   const onMouseLeaveHandler = () => {
     buttonOneTween.current.reverse()
+    buttonOneTween2.current.reverse()
   }
 
   useEffect(() => {
@@ -149,6 +159,20 @@ const HomeMain = () => {
         },
         "-=.6"
       )
+    // .to(
+    //   ".nested-bar",
+    //   {
+    //     x: "0",
+    //     display: "flex"
+    //     // duration: 0.8
+    //   },
+    //   "-=.6"
+    // )
+    // .to(".nested-bar", {
+    //   x: "150"
+
+    //   // duration: 0.8
+    // })
 
     // const words = ["websites", "apps", "worlds"]
 
@@ -279,7 +303,7 @@ const HomeMain = () => {
                   style={{ background: "transparent" }}
                 >
                   {" "}
-                  {screen === "Ipad" ? <ThreeDIpad /> : <ThreeD1 />}
+                  {screen === "Ipad" ? <ThreeDIpad /> : <ThreeD1 x={x} y={y} />}
                 </div>
               ) : null}
             </Col>
@@ -299,9 +323,15 @@ const HomeMain = () => {
         {" "}
         <Contact />
       </div>
-      <Work />
-
-      <div>
+      <div
+        style={{
+          display: "inline-block !important"
+        }}
+        data-aos='fade-in'
+      >
+        <Work />
+      </div>
+      <div data-aos='fade-in'>
         <Footer />
       </div>
     </div>

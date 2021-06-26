@@ -1,9 +1,52 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
+import { gsap } from "gsap"
 
 import { Navbar, Nav } from "react-bootstrap"
+import HeaderLink from "./HeaderLink.js"
 import logo3 from "../images/logo3.png"
 //#555eff #fa75d2  #21ffe5"
 const Header = () => {
+  const linkBar0Ref = useRef(null)
+  const linkBarRef = useRef(null)
+  const linkWordRef = useRef(null)
+  const linkTween = useRef(null)
+  const linkBarTween0 = useRef(null)
+  const linkBarTween = useRef(null)
+
+  useEffect(() => {
+    linkTween.current = gsap.to(linkWordRef.current, {
+      color: "#2181ff",
+      duration: 0.1,
+
+      paused: true
+    })
+
+    linkBarTween0.current = gsap.to(linkBar0Ref.current, {
+      opacity: 1,
+
+      paused: true,
+      duration: 1
+    })
+
+    linkBarTween.current = gsap.to(linkBarRef.current, {
+      x: "150",
+
+      duration: 0.8,
+      paused: true
+    })
+  }, [])
+
+  const onMouseEnterHandler = () => {
+    linkTween.current.play()
+    linkBarTween0.current.play()
+    linkBarTween.current.play()
+  }
+  const onMouseLeaveHandler = () => {
+    linkBarTween.current.reverse()
+    linkBarTween0.current.reverse()
+    linkTween.current.reverse()
+  }
+
   return (
     <header>
       <Navbar style={{ background: "#0d0d0d" }} expand='lg' variant='dark'>
@@ -27,30 +70,9 @@ const Header = () => {
         <Navbar.Collapse id='basic-navbar-nav' className='collapse'>
           <Nav className='mr-auto'>
             <div className='navLink-wrapper'>
-              <Nav.Link
-                href='#work'
-                className='lin'
-                style={{
-                  color: "#5c21ff",
-                  fontSize: "180"
-                }}
-              >
-                Work
-              </Nav.Link>
-              <Nav.Link
-                href='#skills'
-                className='lin'
-                style={{ color: "#5c21ff" }}
-              >
-                Skills
-              </Nav.Link>
-              <Nav.Link
-                href='#contact'
-                className='lin'
-                style={{ color: "#5c21ff" }}
-              >
-                Resume
-              </Nav.Link>
+              <HeaderLink name='Work' />
+              <HeaderLink name='Skills' />
+              <HeaderLink name='Resume' />
             </div>
           </Nav>
         </Navbar.Collapse>
