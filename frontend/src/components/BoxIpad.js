@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react"
 import { useFrame } from "@react-three/fiber"
 import create from "zustand"
 
-const BOX_COUNT = 120
+const BOX_COUNT = 4
 
 const boxIds = new Array(BOX_COUNT).fill().map((_, idx) => idx)
 const boxIdsCoordinates = boxIds.reduce(

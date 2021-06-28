@@ -141,7 +141,7 @@ curved-div - 9 */
 
   .work-title2 {
     margin-top: 2vw !important;
-    color: white !important;
+    color: #5c9aff !important;
     margin-bottom: 2vw;
     background: transparent !important;
   }
@@ -268,7 +268,7 @@ curved-div - 9 */
   }
 
   .what-im-into {
-    margin-top: -3vw !important;
+    margin-top: 3vw !important;
     background: transparent;
     border: none 1px yellow;
     margin-left: -5vw !important;
@@ -534,6 +534,10 @@ curved-div - 9 */
 
   .assistance {
     margin-top: 8vw !important;
+  }
+
+  .tagcloud--item {
+    color: #dc5ced;
   }
 }
 
@@ -892,7 +896,7 @@ curved-div - 9 */
 
   .work-title2 {
     margin-top: -1vw !important;
-    /* margin-left: -16vw !important; */
+    color: white !important;
   }
 
   ::placeholder {
@@ -941,6 +945,7 @@ curved-div - 9 */
   .work-title3 {
     font-size: 6vh !important;
     margin-top: 5vw !important;
+    color: white !important;
   }
 
   .skills {
@@ -994,10 +999,6 @@ curved-div - 9 */
   .form-box {
     margin-top: 0vw !important;
     margin-bottom: 40vw !important;
-  }
-
-  .collapse {
-    border: solid 2px red !important;
   }
 
   .contact-title {

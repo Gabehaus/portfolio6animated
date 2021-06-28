@@ -8,7 +8,7 @@ import SkillSelector from "./SkillSelector"
 import Aos from "aos"
 import "aos/dist/aos.css"
 
-const Skills = ({ skill }) => {
+const Skills = ({ skill, radius }) => {
   const chart = "languages"
   const [screen, setScreen] = useState("")
   const elemRef = useRef()
@@ -59,7 +59,12 @@ const Skills = ({ skill }) => {
             ref={elemRef}
           >
             {isVisible && (
-              <SkillSelector skillSet={chart} screen={screen} skill={skill} />
+              <SkillSelector
+                skillSet={chart}
+                screen={screen}
+                skill={skill}
+                radius={radius}
+              />
             )}
           </Col>
         ) : null}
@@ -67,7 +72,7 @@ const Skills = ({ skill }) => {
           <Col
             md={12}
             className='work-title2 mt-5'
-            style={{ background: "transparent" }}
+            style={{ background: "transparent", letterSpacing: "3px" }}
           >
             What I'm into
           </Col>{" "}
@@ -108,18 +113,12 @@ const Skills = ({ skill }) => {
                     skillSet={chart}
                     screen={screen}
                     skill={skill}
+                    radius={radius}
                   />
                 </Col>
               </React.Fragment>
             </Col>
           ) : null}
-          <Col md={12} style={{ border: "none 1px pink" }}>
-            {" "}
-            <Link to={resume} target='_blank' download>
-              <p className='resume-link-skills'>Download My Resume</p>
-            </Link>
-          </Col>
-          <div style={{ minHeight: "2vw" }}></div>
         </Col>
       </Row>
     </div>

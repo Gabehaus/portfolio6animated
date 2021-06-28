@@ -25,6 +25,7 @@ const HomeMain = () => {
   const [screen, setScreen] = useState("")
   const { x, y } = useMousePosition()
   const scrollY = useScrollPosition(60 /*fps*/)
+  const [radius, setRadius] = useState(350)
   const skillReducer = useSelector(state => state.skill)
   const { skill } = skillReducer
   const buttonOneRef = useRef(null)
@@ -160,37 +161,16 @@ const HomeMain = () => {
         },
         "-=.6"
       )
-    // .to(
-    //   ".nested-bar",
-    //   {
-    //     x: "0",
-    //     display: "flex"
-    //     // duration: 0.8
-    //   },
-    //   "-=.6"
-    // )
-    // .to(".nested-bar", {
-    //   x: "150"
-
-    //   // duration: 0.8
-    // })
-
-    // const words = ["websites", "apps", "worlds"]
-
-    // const tl2 = gsap.timeline({ delay: 3, repeat: -1 })
-
-    // words.map(word => {
-    //   let tl3 = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 })
-    //   tl3.to(".typed2", { duration: 0.3, text: word, delay: 1 })
-    //   tl2.add(tl3)
-    // })
   })
 
   //set screen variable
   useEffect(() => {
     const screenSet = () => {
+      const radiusAdjusted = Number(window.innerWidth) * 0.23 - 91
+      setRadius(radiusAdjusted)
       if (window.innerWidth < 1400 && window.innerWidth > 800) {
         setScreen("Laptop")
+
         return
       }
 
@@ -317,7 +297,7 @@ const HomeMain = () => {
         {/* <Skills skill={skill} /> */}
       </Row>
 
-      <Skills skill={skill} />
+      <Skills skill={skill} radius={radius} />
 
       <div
         style={{

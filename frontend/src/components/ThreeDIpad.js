@@ -11,7 +11,7 @@ function Dolly() {
   useFrame(({ clock, camera }) => {
     camera.position.z = 3
     camera.position.y = 0
-    camera.position.x = 0.2
+    camera.position.x = 0.15
   })
 
   return null
