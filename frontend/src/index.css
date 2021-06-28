@@ -1021,6 +1021,10 @@ curved-div - 9 */
     padding-left: 0vw !important;
   }
 
+  .tagcloud--item {
+    color: #7c73ff;
+  }
+
   body {
     margin-left: 0vw !important;
   }
